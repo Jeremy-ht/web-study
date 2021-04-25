@@ -108,21 +108,61 @@
 
 
 
+## Math
+
+![1618920775880](assets/1618920775880.png)
+
+![1618921563296](assets/1618921563296.png)
+
+```js
+# min()
+# max()
+
+# ceil()	向上取整
+	Math.ceil(25.9)	// 26
+	Math.ceil(25.1)	// 26
+# floor()	向下取整
+	Math.floor(25.9)	// 25
+	Math.floor(25.1)	// 25
+# round()	四舍五入
+    Math.round(25.9)	// 26
+    Math.round(25.1)	// 25
+
+# random()	返回0到1之间的随机数，不包括0和1
+	值 = Math.floor(Math.random() * 可能值的总数 + 第一个可能出现的值)
+    1-10	Math.floor(Math.random() * 10 + 1)
+	3-10	Math.floor(Math.random() * 10 + 3)
+```
 
 
 
 
 
+## String
+
+```js
+# charAt()		charCodeAt()
+	const str = 'hello'
+    str.charAt(1)	// 'e'
+	str.charCodeAt(1)	// '101'
+	str[1]	//  'e' (注：浏览器版本)
+
+# concat()
+
+# slice()	substr()	substring()
+
+# indexOf()		lastIndexOf()
+
+# trim()	trimLeft()	trimRight()
+
+# toLowerCase()		toUpperCase()
+```
 
 
 
+## Global
 
-
-
-
-
-
-
+![1618920597667](assets/1618920597667.png)
 
 
 
