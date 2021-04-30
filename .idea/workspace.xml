@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/1618920597667.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/1618920775880.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/1618921563296.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/1619590104452.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/1619675319297.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/1619675340113.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/01-上下切换图片.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/array.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1064" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectId" id="1rkhWssFER3AGFeULRk8rAIGPLf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\web-study\image" />
+      <recent name="C:\Users\admin\Desktop\web-study" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="" />
+      <created>1618299506239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618299506239</updated>
+      <workItem from="1618299508336" duration="209000" />
+      <workItem from="1618651818484" duration="96000" />
+      <workItem from="1619341002576" duration="61000" />
+      <workItem from="1619526030225" duration="2035000" />
+      <workItem from="1619675228066" duration="1242000" />
+      <workItem from="1619769016976" duration="2505000" />
+    </task>
+    <task id="LOCAL-00001" summary="add one day.txt">
+      <created>1618299691583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618299691583</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add">
+      <created>1618651881394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618651881394</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1619341045102</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619341045102</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add one day.txt" />
+    <MESSAGE value="add" />
+    <MESSAGE value="init" />
+    <MESSAGE value="add array" />
+    <option name="LAST_COMMIT_MESSAGE" value="add array" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1619527152524">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1619527152524" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
