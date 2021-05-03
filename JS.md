@@ -224,11 +224,104 @@
 
 
 
+- 获取元素节点的子节点
+
+  ```javascript
+  #  通过具体的元素节点调用
+  1. getElementsByTagName()
+     – 方法，返回当前节点的指定标签名后代节点
+     
+  2. childNodes
+     – 属性，表示当前节点的所有子节点
+     
+  3. firstChild
+     – 属性，表示当前节点的第一个子节点
+     
+  4. lastChild
+     – 属性，表示当前节点的最后一个子节点
+  ```
+
+- 获取父节点和兄弟节点
+
+  ```js
+  #  通过具体的节点调用
+  1. parentNode
+  	– 属性，表示当前节点的父节点
+      
+  2. previousSibling
+  	– 属性，表示当前节点的前一个兄弟节点
+      
+  3. nextSibling
+  	– 属性，表示当前节点的后一个兄弟节点
+  ```
 
 
+- **document**
 
+  ```js
+  # 保存body的引用
+  	document.body 
+  
+  # 保存html根标签
+  	document.documentElement
+  
+  # 页面中所有的元素
+  	document.all
+  
+  # 根据元素的class属性值查询一组元素节点对象
+  	document.getElementsByClassName("");
+  
+  # document.querySelector()
+  /*
+   * document.querySelector()
+   * 	- 需要一个选择器的字符串作为参数，可以根据一个CSS选择器来查询一个元素节点对象
+   * 	- 虽然IE8中没有getElementsByClassName()但是可以使用querySelector()代替
+   * 	- 使用该方法总会返回唯一的一个元素，如果满足条件的元素有多个，那么它只会返回第一个
+   */
+  
+  # document.querySelectorAll()
+  /*
+   * document.querySelectorAll()
+   * 	- 该方法和querySelector()用法类似，不同的是它会将符合条件的元素封装到一个数组中返回
+   * 	- 即使符合条件的元素只有一个，它也会返回数组
+   */
+  ```
 
+- **操作样式**
 
+  ```js
+  # 内联样式
+  	元素.style.样式名 = 样式值
+  
+  # IE(只有IE支持)
+  	元素.currentStyle.样式名
+  
+  # 其他(IE8以上)
+  	getComputedStyle()	// getComputedStyle(box1,null)
+  /*
+   * 在其他浏览器中可以使用
+   * 		getComputedStyle()这个方法来获取元素当前的样式
+   * 		这个方法是window的方法，可以直接使用
+   * 需要两个参数
+   * 		第一个：要获取样式的元素
+   * 		第二个：可以传递一个伪元素，一般都传null
+   * 
+   * 该方法会返回一个对象，对象中封装了当前元素对应的样式
+   * 	可以通过对象.样式名来读取样式
+   * 	如果获取的样式没有设置，则会获取到真实的值，而不是默认值
+   * 	比如：没有设置width，它不会获取到auto，而是一个长度
+   * 
+   * 但是该方法不支持IE8及以下的浏览器
+   * 
+   * 通过currentStyle和getComputedStyle()读取到的样式都是只读的，
+   * 	不能修改，如果要修改必须通过style属性
+   */
+  
+  ```
+
+尚硅谷前端学科全套教程
+链接：https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg 
+提取码：afyt
 
 
 
