@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dom/01-dom增删改.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dom/02-使用DOM操作CSS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dom/03-读取元素的样式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/01-上下切换图片.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/dom/00-上下切换图片.html" afterDir="false" />
-    </list>
+    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +71,7 @@
       <workItem from="1619526030225" duration="2035000" />
       <workItem from="1619675228066" duration="1242000" />
       <workItem from="1619769016976" duration="3290000" />
-      <workItem from="1620027797875" duration="3609000" />
+      <workItem from="1620027797875" duration="3644000" />
     </task>
     <task id="LOCAL-00001" summary="add one day.txt">
       <created>1618299691583</created>
@@ -110,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619771564224</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add02">
+      <created>1620034376191</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620034376192</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,21 +120,22 @@
     <MESSAGE value="init" />
     <MESSAGE value="add array" />
     <MESSAGE value="add01" />
-    <option name="LAST_COMMIT_MESSAGE" value="add01" />
+    <MESSAGE value="add02" />
+    <option name="LAST_COMMIT_MESSAGE" value="add02" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="92" key="CommitChangelistDialog2" timestamp="1619771563222">
+    <state x="558" y="92" key="CommitChangelistDialog2" timestamp="1620034374993">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1619771563222" />
+    <state x="558" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1620034374993" />
     <state x="916" y="108" key="SettingsEditor" timestamp="1620032180969">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="916" y="108" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1620032180969" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1619771572808">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1620034377786">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1619771572808" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1620034377786" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1619527152524">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
