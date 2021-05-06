@@ -1,3 +1,10 @@
+5.06
+	https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure
+
+
+
+
+
 --- https://mp.weixin.qq.com/s/zWIv5yBTD0Tvt8txb8znrA
 	Linux 系统监控工具（top、 htop、 iftop）	
 
@@ -34,9 +41,8 @@ https://zhuanlan.zhihu.com/p/102279765
 4.14
 	HTTPS	https://mp.weixin.qq.com/s/jLqI7pVQgpWUIIWmsmr30A
 
-4.15
 
-4.16
+
 
 
 

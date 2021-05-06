@@ -1,5 +1,13 @@
 # JavaScript
 
+尚硅谷前端学科全套教程
+链接：https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg 
+提取码：afyt
+
+
+
+[Introduction - 力扣加加 - 努力做西湖区最好的算法题解 (gitbook.io)](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
+
 
 
 - typeof
@@ -47,11 +55,11 @@
 
 - **slice()**
 
-  - ```javascript
+   ```javascript
     # 从某个已有的数组返回选定的元素
     slice(start,end)
     返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。
-    ```
+   ```
 
 - ##### splice()
 
@@ -208,7 +216,7 @@
 
 ### 获取节点
 
-- 获取元素节点
+- **获取元素节点**
 
   ```js
   # 通过document对象调用
@@ -224,7 +232,7 @@
 
 
 
-- 获取元素节点的子节点
+- **获取元素节点的子节点**
 
   ```javascript
   #  通过具体的元素节点调用
@@ -241,7 +249,7 @@
      – 属性，表示当前节点的最后一个子节点
   ```
 
-- 获取父节点和兄弟节点
+- **获取父节点和兄弟节点**
 
   ```js
   #  通过具体的节点调用
@@ -319,9 +327,79 @@
   
   ```
 
-尚硅谷前端学科全套教程
-链接：https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg 
-提取码：afyt
+  ```js
+  ### Element 对象 ### 
+  
+  # clientWidth
+  # clientHeight
+  /*
+   * 	- 这两个属性可以获取元素的可见宽度和高度
+   * 	- 这些属性都是不带px的，返回都是一个数字，可以直接进行计算
+   * 	- 会获取元素宽度和高度，包括内容区和内边距，不包括边框
+   *  - 这些属性都是只读的，不能修改
+   */
+  
+  
+  # offsetWidth
+  # offsetHeight
+  /*
+   * 	- 获取元素的整个的宽度和高度，包括内容区、内边距和边框
+   */
+  # offsetLeft
+  # offsetTop
+  /*
+   * offsetLeft
+   * 	- 当前元素相对于其定位父元素的水平偏移量
+   * offsetTop
+   * 	- 当前元素相对于其定位父元素的垂直偏移量
+   */
+  # offsetParent
+  /*
+   * 	- 可以用来获取当前元素的定位父元素
+   *  - 会获取到离当前元素最近的开启了定位的祖先元素
+   * 		如果所有的祖先元素都没有开启定位，则返回body
+   */
+  
+  
+  # scrollWidth
+  # scrollHeight
+  /*
+   * 	- 可以获取元素整个滚动区域的宽度和高度
+   */
+  # scrollLeft
+  # scrollTop
+  /*
+   * scrollLeft
+   * 	- 可以获取水平滚动条滚动的距离
+   * scrollTop
+   * 	- 可以获取垂直滚动条滚动的距离
+   */
+  
+  # 当满足 scrollHeight - scrollTop == clientHeight
+  # 说明垂直滚动条滚动到底了
+  
+  # 当满足 scrollWidth - scrollLeft == clientWidth
+  # 说明水平滚动条滚动到底
+  
+  
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
