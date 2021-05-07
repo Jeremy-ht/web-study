@@ -402,18 +402,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 # ==BOM==
 
 
@@ -429,6 +417,56 @@
 
 
 
+
+# ==事件==
+
+### 事件对象
+
+- [js中（event）事件对象 - 萌新萌新很萌 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dcyd/p/12482989.html)
+
+- 当事件的响应函数被触发时，浏览器每次都会将一个事件对象作为实参传递进响应函数,在事件对象中封装了当前事件相关的一切信息，比如：鼠标的坐标  键盘哪个按键被按下  鼠标滚轮滚动的方向。
+
+  ```js
+  # 在IE8中，响应函数被触发时，浏览器不会传递事件对象，
+  # 在IE8及以下的浏览器中，是将事件对象作为window对象的属性保存的
+  
+  # clientX	可以获取鼠标指针的水平坐标
+  # cilentY	可以获取鼠标指针的垂直坐标
+  
+  Div.onmousemove = function(event){
+  
+      //解决事件对象的兼容性问题
+      event = event || window.event;
+  
+      /*
+  	 * clientX可以获取鼠标指针的水平坐标
+  	 * cilentY可以获取鼠标指针的垂直坐标
+  	 */
+      var x = event.clientX;
+      var y = event.clientY;
+  
+  };
+  		
+  ```
+
+
+
+
+### onscroll
+
+```js
+# 在元素的滚动条滚动时触发
+```
+
+
+
+
+
+### onmousemove
+
+```js
+# 鼠标在元素中移动时被触发
+```
 
 
 
