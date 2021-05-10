@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/1..html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dom/04-事件对象.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/dom/05-拖拽.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/demo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.last.introduce.type" value="VAR" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/js/dom" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -48,7 +49,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -60,6 +62,7 @@
       <recent name="C:\Users\admin\Desktop\web-study" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
   </component>
@@ -80,6 +83,7 @@
       <workItem from="1620119566711" duration="1735000" />
       <workItem from="1620305289707" duration="51000" />
       <workItem from="1620366934544" duration="2471000" />
+      <workItem from="1620651229494" duration="3734000" />
     </task>
     <task id="LOCAL-00001" summary="add one day.txt">
       <created>1618299691583</created>
@@ -134,7 +138,18 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add one day.txt" />
@@ -146,24 +161,6 @@
     <MESSAGE value="add03" />
     <MESSAGE value="add04" />
     <option name="LAST_COMMIT_MESSAGE" value="add04" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="558" y="92" key="CommitChangelistDialog2" timestamp="1620305321700">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="558" y="92" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1620305321700" />
-    <state x="916" y="108" key="SettingsEditor" timestamp="1620032180969">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="916" y="108" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1620032180969" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1620305324811">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1620305324811" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1619527152524">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1619527152524" />
   </component>
   <component name="masterDetails">
     <states>
