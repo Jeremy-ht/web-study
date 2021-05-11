@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/dom/05-拖拽.html" afterDir="false" />
+    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="add05">
+      <change afterPath="$PROJECT_DIR$/js/dom/06-滚轮事件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/dom/07-定时器‘.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/demo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -83,7 +83,8 @@
       <workItem from="1620119566711" duration="1735000" />
       <workItem from="1620305289707" duration="51000" />
       <workItem from="1620366934544" duration="2471000" />
-      <workItem from="1620651229494" duration="3734000" />
+      <workItem from="1620651229494" duration="3896000" />
+      <workItem from="1620741025781" duration="2365000" />
     </task>
     <task id="LOCAL-00001" summary="add one day.txt">
       <created>1618299691583</created>
@@ -134,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620305322941</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add05">
+      <created>1620658748333</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620658748333</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +158,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add one day.txt" />
@@ -160,7 +169,8 @@
     <MESSAGE value="add02" />
     <MESSAGE value="add03" />
     <MESSAGE value="add04" />
-    <option name="LAST_COMMIT_MESSAGE" value="add04" />
+    <MESSAGE value="add05" />
+    <option name="LAST_COMMIT_MESSAGE" value="add05" />
   </component>
   <component name="masterDetails">
     <states>

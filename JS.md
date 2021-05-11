@@ -4,8 +4,6 @@
 链接：https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg 
 提取码：afyt
 
-
-
 [Introduction - 力扣加加 - 努力做西湖区最好的算法题解 (gitbook.io)](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
 
 
@@ -195,7 +193,7 @@
 
 
 
-# ==DOM==
+# DOM
 
 
 
@@ -402,7 +400,7 @@
 
 
 
-# ==BOM==
+# BOM
 
 
 
@@ -418,7 +416,7 @@
 
 
 
-# ==事件==
+# 事件
 
 ## 事件对象
 
@@ -512,10 +510,104 @@
 # 鼠标抬起
 ```
 
+
+
 ```js
 // setCapture()	把下一次所有的鼠标按下相关的事件捕获到自身上,只有IE支持
 // releaseCapture()	
 ```
+
+
+
+## 滚轮事件
+
+```js
+# onmousewheel	鼠标滚轮滚动
+	- 火狐不支持
+			bind(box1,"DOMMouseScroll",box1.onmousewheel);	// 火狐
+	- 使用addEventListener()方法绑定响应函数，取消默认行为时不能使用return false，需要使用event来取消默认行为				  event.preventDefault();但是IE8不支持event.preventDefault();
+	- event.preventDefault && event.preventDefault();
+```
+
+
+
+## 键盘事件
+
+```js
+# onkeydown
+    - 按键被按下
+	- 可以通过event.keyCode来获取按键的编码
+    - 对于onkeydown来说如果一直按着某个按键不松手，则事件会一直触发
+    - 当onkeydown连续触发时，第一次和第二次之间会间隔稍微长一点，其他的会非常的快，这种设计是为了防止误操作的发生。
+
+# onkeyup
+	- 按键被松开
+
+// 键盘事件一般都会绑定给一些可以获取到焦点的对象或者是document
+```
+
+
+
+
+
+# 定时器
+
+```js
+# setInterval()
+  	- 定时调用
+  	- 可以将一个函数，每隔一段时间执行一次
+ 	- 参数：
+  		1.回调函数，该函数会每隔一段时间被调用一次
+  		2.每次调用间隔的时间，单位是毫秒
+ 	- 返回值：
+		返回一个Number类型的数据，个数字用来作为定时器的唯一标识
+
+# clearInterval()
+	- 关闭一个定时器
+	- 方法中需要一个定时器的标识作为参数，这样将关闭标识对应的定时器，clearInterval(timer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
