@@ -552,7 +552,10 @@
 
 # 定时器
 
+- https://www.cnblogs.com/xiaohuochai/p/5773183.html
+
 ```js
+// 定时调用
 # setInterval()
   	- 定时调用
   	- 可以将一个函数，每隔一段时间执行一次
@@ -566,19 +569,20 @@
 	- 关闭一个定时器
 	- 方法中需要一个定时器的标识作为参数，这样将关闭标识对应的定时器，clearInterval(timer);
 
+// 延时调用
+# setTimeout()
+
+# clearTimeout()
+
+```
 
 
 
+- https://www.cnblogs.com/xiaohuochai/p/5777186.html
 
-
-
-
-
-
-
-
-
-
+```js
+# requestAnimationFrame
+	- IE9浏览器不支持该方法，可以使用setTimeout来兼容
 ```
 
 
