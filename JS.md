@@ -1,20 +1,18 @@
 # JavaScript
 
-尚硅谷前端学科全套教程
-链接：https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg 
-提取码：afyt
+- 尚硅谷前端学科全套教程
+  链接：https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg 
+  提取码：afyt
 
-[Introduction - 力扣加加 - 努力做西湖区最好的算法题解 (gitbook.io)](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
+- 算法
+
+  [Introduction - 力扣加加 - 努力做西湖区最好的算法题解 (gitbook.io)](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
 
 
 
 - typeof
 
 - instanceof
-
-
-
-
 
 ## Object
 
@@ -402,9 +400,90 @@
 
 # BOM
 
+```js
+// 这些BOM对象在浏览器中都是作为window对象的属性保存的，可以通过window对象来使用，也可以直接使用
+```
 
 
 
+### Window
+
+- 代表的是整个浏览器的窗口，同时window也是网页中的全局对象
+
+
+
+
+### Navigator
+
+- 代表的当前浏览器的信息，通过该对象可以来识别不同的浏览器
+
+  ```js
+  
+  
+  ```
+
+  
+
+### Location
+
+- 代表当前浏览器的地址栏信息，通过Location可以获取地址栏信息，或者操作浏览器跳转页面
+
+  ```js
+  1、assign()
+  	- 用来跳转到其他的页面，作用和直接修改location一样
+  	- location.assign("http://www.baidu.com") === location = "http://www.baidu.com"
+  	- 如果直接将location属性修改为一个完整的路径，或相对路径则我们页面会自动跳转到该路径，并且会生成相应的历史记录
+  
+  2、reload()
+  	- 用于重新加载当前页面，作用和刷新按钮一样
+  	- 如果在方法中传递一个true，作为参数，则会强制清空缓存刷新页面
+  	- location.reload(true)
+  
+  3、replace()
+  	- 可以使用一个新的页面替换当前页面，调用完毕也会跳转页面
+  	- 不会生成历史记录，不能使用回退按钮回退
+  	- location.replace("01.html")
+  ```
+
+  
+
+### History
+
+- 代表浏览器的历史记录，可以通过该对象来操作浏览器的历史记录由于隐私原因，该对象不能获取到具体的历史记录，只能操作浏览器向前或向后翻页，而且该操作只在当次访问时有效
+
+- https://www.cnblogs.com/xiaohuochai/p/6379546.html
+
+  ```js
+  // 属性
+  1、length
+  	- 属性，可以获取到当成访问的链接数量
+  	- history.length
+  
+  
+  // 方法
+  2、back()
+  	- 可以用来回退到上一个页面，作用和浏览器的回退按钮一样
+  	- history.back()
+  
+  3、forward()
+  	- 可以跳转下一个页面，作用和浏览器的前进按钮一样
+  	- history.forward()
+  
+  4、go()
+  	- 可以用来跳转到指定的页面
+  	- 要一个整数作为参数	history.go(1)
+  	- 参数：
+              1: 表示向前跳转一个页面 相当于forward()
+              2: 表示向前跳转两个页面
+              -1: 表示向后跳转一个页面
+              -2: 表示向后跳转两个页面
+  ```
+
+
+
+### Screen
+
+- 代表用户的屏幕的信息，通过该对象可以获取到用户的显示器的相关的信息
 
 
 
@@ -425,14 +504,72 @@
   - [你真的理解 事件冒泡 和 事件捕获 吗？ (juejin.cn)](https://juejin.cn/post/6844903834075021326)
   - [事件及事件绑定 && 事件对象及事件传播——基础知识（脑图梳理） (juejin.cn)](https://juejin.cn/post/6844904144587718664)
 
+
+
+- **event**
+
+  - [深入理解DOM事件机制系列第三篇——事件对象 - 小火柴的蓝色理想 - 博客园 (cnblogs.com)](https://www.cnblogs.com/xiaohuochai/p/5862775.html)
+
+  ```JS
+  // 	兼容写法	e = e || event;
+  1、type
+  	- 表示被触发的事件类型
+  	- e.type
+  
+  2、currentTarget
+  	- IE8-浏览器不支持
+  	- 返回事件当前所在的节点，即正在执行的监听函数所绑定的那个节点
+  	- e.currentTarget
+  
+  3、target
+  	- IE8-浏览器不支持
+  	- target属性返回事件的实际目标节点
+  
+  4、srcElement
+  　　- firefox浏览器不支持
+  　　- srcElement属性与target属性功能一致
+  
+  	// 兼容	var target = e.target || e.srcElement;
+  
+  # 由于事件会在冒泡阶段向上传播到父节点，因此可以把子节点的监听函数定义在父节点上，
+  # 由父节点的监听函数统一处理多个子元素的事件。这种方法叫做事件的代理(delegation)，也叫事件委托
+  
+  // 事件冒泡
+  5、bubbles
+  	- 属性返回一个布尔值，表示当前事件是否会冒泡。该属性为只读属性
+  	- focus、blur和scroll事件不会冒泡，除了这三个事件bubbles属性返回false外，其他事件该属性都为true
+  
+  6、cancelBubble
+  	- 该属性全浏览器支持，但并不是标准写法
+  	- cancelBubble属性只能用于阻止冒泡，无法阻止捕获阶段。该值可读写，默认值是false。
+  	- 当设置为true时，cancelBubble可以取消事件冒泡
+  	- 当使用stopIPropagation()方法或stopImmediatePropagation()方法时，关于cancelBubble值的变化，各浏览器表现不同
+  
+  7、stopPropagation()
+  	- IE8-浏览器不支持 
+  	- 表示取消事件的进一步捕获或冒泡，无返回值
+  
+  8、stopImmediatePropagation()
+  	- IE8-浏览器不支持 
+  	- 可以取消事件的进一步捕获或冒泡，而且可以阻止同一个事件的其他监听函数被调用，无返回值
+  	- 使用stopIPropagation()方法，可以阻止冒泡，但无法阻止同一事件的其他监听函数被调用
+  
+  ```
+
+
+
+- 
+
+- 
+
 - 当事件的响应函数被触发时，浏览器每次都会将一个事件对象作为实参传递进响应函数,在事件对象中封装了当前事件相关的一切信息，比如：鼠标的坐标  键盘哪个按键被按下  鼠标滚轮滚动的方向。
 
   ```js
-  # 在IE8中，响应函数被触发时，浏览器不会传递事件对象，
-  # 在IE8及以下的浏览器中，是将事件对象作为window对象的属性保存的
+  // 在IE8中，响应函数被触发时，浏览器不会传递事件对象，
+  // 在IE8及以下的浏览器中，是将事件对象作为window对象的属性保存的
   
-  # clientX	可以获取鼠标指针的水平坐标
-  # cilentY	可以获取鼠标指针的垂直坐标
+  // clientX	可以获取鼠标指针的水平坐标
+  // cilentY	可以获取鼠标指针的垂直坐标
   
   Div.onmousemove = function(event){
   
@@ -450,13 +587,43 @@
   		
   ```
 
+  
 
+  - **addEventListener**()
+    - [深入理解DOM事件机制系列第二篇——事件处理程序 - 小火柴的蓝色理想 - 博客园 (cnblogs.com)](https://www.cnblogs.com/xiaohuochai/p/5859674.html)
 
-### onscroll
+  ```js
+  // addEventListener()	removeEventListener()	- DOM2级事件处理
+  	- IE8-浏览器不支持，IE8使用 attachEvent()、detachEvent()
+  	- 用于处理指定和删除事件处理程序的操作
+  	- 可以添加多个事件处理程序，并按照他们添加的顺序触发
+  	- 使用addEventListener()方法绑定响应函数，取消默认行为时不能使用return false，
+      	需要使用event来取消默认行为event.preventDefault();但是IE8不支持event.preventDefault();
+  	    event.preventDefault && event.preventDefault();
+  	- 参数：
+  		1、要处理的事件名
+  		2、作为事件处理程序的函数
+  		3、一个布尔值，不写默认false
+              - true，表示在捕获阶段调用事件处理程序；
+              - false，表示在冒泡阶段调用事件处理程序。
+  
+  	   box.addEventListener('click',function(){
+              consol.log('1');
+          });
+  
+  // 绑定事件 兼容写法
+  function addEvent(target,type,handler){
+      if(target.addEventListener){
+          target.addEventListener(type,handler,false);
+      }else{
+          target.attachEvent('on'+type,function(event){
+              return handler.call(target,event);
+          });
+      }
+  }
+  ```
 
-```js
-# 在元素的滚动条滚动时触发
-```
+  
 
 
 
@@ -470,15 +637,11 @@
 # 点击（移动端click被识别为单击）
 ```
 
-
-
 ### ondblclick
 
 ```js
 # 双击（大概是在 300ms 之间点击两次）
 ```
-
-
 
 ### oncontextmenu
 
@@ -486,15 +649,11 @@
 # 右键点击
 ```
 
-
-
 ### onmousemove
 
 ```js
 # 鼠标在元素中移动时被触发
 ```
-
-
 
 ### onmousedown
 
@@ -502,15 +661,11 @@
 # 鼠标按下
 ```
 
-
-
 ### onmouseup
 
 ```js
 # 鼠标抬起
 ```
-
-
 
 ```js
 // setCapture()	把下一次所有的鼠标按下相关的事件捕获到自身上,只有IE支持
@@ -550,6 +705,24 @@
 
 
 
+### onscroll
+
+```js
+# 在元素的滚动条滚动时触发
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 定时器
 
 - https://www.cnblogs.com/xiaohuochai/p/5773183.html
@@ -569,10 +742,11 @@
 	- 关闭一个定时器
 	- 方法中需要一个定时器的标识作为参数，这样将关闭标识对应的定时器，clearInterval(timer);
 
-// 延时调用
+// 延时调用		延时调用一个函数不马上执行，而是隔一段时间以后在执行，而且只会执行一次
 # setTimeout()
 
 # clearTimeout()
+	- 关闭一个延时调用
 
 ```
 
