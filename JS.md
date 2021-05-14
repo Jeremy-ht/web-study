@@ -379,6 +379,178 @@
   
   
   ```
+  
+  
+
+### 元素尺寸
+
+- **偏移 offset**
+
+  
+
+  ![img](C:\Users\admin\Desktop\web-study\JS.assets\740839-20160901091826449-1099471755.jpg)
+
+  
+
+  - https://www.cnblogs.com/xiaohuochai/p/5828369.html
+
+  ```js
+  // 定位父级 offsetParent
+  	- 与当前元素最近的经过定位(position不等于static)的父级元素
+  
+  1、元素自身有fixed定位，offsetParent的结果为null
+  	- firefox浏览器有兼容性问题
+  	- box.offsetParent	// firefox并没有考虑固定定位的问题，返回<body>，其他浏览器都返回null
+  	- 当元素自身有fixed固定定位时，我们知道固定定位的元素相对于视口进行定位，
+  	  此时没有定位父级，offsetParent的结果为null
+  
+  2、元素自身无fixed定位，且父级元素都未经过定位，offsetParent的结果为<body>
+      
+  3、元素自身无fixed定位，且父级元素存在经过定位的元素，offsetParent的结果为离自身元素最近的经过定位的父级元素
+  
+  4、<body>元素的parentNode是null
+  
+  
+  // 偏移量
+  偏移量共包括offsetHeight、offsetWidth、offsetLeft、offsetTop这四个属性
+  
+  ```
+
+  
+
+
+
+- **客户区Client**
+
+  
+
+  ![img](C:\Users\admin\Desktop\web-study\JS.assets\740839-20160901152045574-1466453.jpg)
+
+  
+
+  - https://www.cnblogs.com/xiaohuochai/p/5830053.html
+
+  ```js
+  // 客户区大小client指的是元素内容及其内边距所占据的空间大小
+  // clientHeight
+  	- clientHeight属性返回元素节点的客户区高度
+  	- clientHeight = padding-top + height + padding-bottom
+  
+  // clientWidth
+  	- clientWidth属性返回元素节点的客户区宽度
+  	- clientWidth = padding-left + width + padding-right
+  	- 滚动条宽度不计算在内
+  
+  
+  //如果display为inline时，clientLeft属性和clientTop属性都返回0
+  // clientLeft
+  	- clientLeft属性返回左边框的宽度
+  
+  // clientTop
+  	- clientTop属性返回上边框的宽度
+  
+  
+  # 页面大小
+  // 表示页面大小(不包含滚动条宽度)
+  	- document.documentElement.clientWidth
+  	- document.documentElement.clientHeight
+  
+  // 浏览器窗口大小减去菜单栏、地址栏等剩余的页面尺寸，由于滚动条是属于页面的，所以包含滚动条
+  	- window.innerWidth
+  	- window.innerHeight
+  ```
+  
+  
+  
+  
+
+- **滚动scroll**
+
+  
+
+  - https://www.cnblogs.com/xiaohuochai/p/5831640.html
+
+  ```js
+  // scrollHeight
+  	- scrollHeight表示元素的总高度，包括由于溢出而无法展示在网页的不可见部分
+  
+  // scrollWidth
+  	- scrollWidth表示元素的总宽度，包括由于溢出而无法展示在网页的不可见部分
+  
+  1、没有滚动条时，scrollHeight与clientHeight属性结果相等，scrollWidth与clientWidth属性结果相等
+  2、存在滚动条时，但元素设置宽高大于等于元素内容宽高时，scroll和client属性的结果相等
+  3、存在滚动条，但元素设置宽高小于元素内容宽高，即存在内容溢出的情况时，scroll属性大于client属性
+  	- scrollHeight属性存在兼容性问题，chrome和safari浏览器中，scrollHeight包含padding-bottom；
+  	  而IE和firefox不包含padding-bottom
+  ```
+
+  
+
+  ```js
+  # 滚动长度
+  // scrollTop
+  	- scrollTop属性表示被隐藏在内容区域上方的像素数。元素未滚动时，scrollTop的值为0，
+  	  如果元素被垂直滚动了，scrollTop的值大于0，且表示元素上方不可见内容的像素宽度
+  
+  // scrollLeft
+  	- scrollLeft属性表示被隐藏在内容区域左侧的像素数。元素未滚动时，scrollLeft的值为0，
+  	  如果元素被水平滚动了，scrollLeft的值大于0，且表示元素左侧不可见内容的像素宽度
+  
+  // 当滚动条滚动到内容底部时，符合以下等式
+  	- scrollHeight == scrollTop  + clientHeight
+  
+  // 与scrollHeight和scrollWidth属性不同的是，scrollLeft和scrollTop是可写的
+  
+  
+  # 页面滚动
+  	- 理论上，通过document.documentElement.scrollTop和scrollLeft可以反映和控制页面的滚动；
+  	  但是chrome和safari浏览器是通过document.body.scrollTop和scrollLeft来控制的
+  // 页面的滚动高度兼容写法
+  	- var docScrollTop = document.documentElement.scrollTop || document.body.scrollTop
+  
+  // 回到顶部
+  	if((document.body.scrollTop || document.documentElement.scrollTop) != 0){
+          document.body.scrollTop = document.documentElement.scrollTop = 0;
+      }
+  
+  // window的只读属性可以获取整个页面滚动的像素值
+  	- IE8-浏览器不支持
+  
+          // pageXOffset
+              - pageXOffset表示水平方向上页面滚动的像素值
+  
+          // pageYOffset
+              - pageYOffset表示垂直方向上页面滚动的像素值
+  
+  
+  # 滚动方法
+  ```
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -499,7 +671,7 @@
 
 ## 事件对象
 
-- 参考文章
+- **参考文章**
   - [js中（event）事件对象 - 萌新萌新很萌 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dcyd/p/12482989.html)
   - [你真的理解 事件冒泡 和 事件捕获 吗？ (juejin.cn)](https://juejin.cn/post/6844903834075021326)
   - [事件及事件绑定 && 事件对象及事件传播——基础知识（脑图梳理） (juejin.cn)](https://juejin.cn/post/6844904144587718664)
@@ -508,7 +680,7 @@
 
 - **event**
 
-  - [深入理解DOM事件机制系列第三篇——事件对象 - 小火柴的蓝色理想 - 博客园 (cnblogs.com)](https://www.cnblogs.com/xiaohuochai/p/5862775.html)
+  - https://www.cnblogs.com/xiaohuochai/p/5862775.html
 
   ```JS
   // 	兼容写法	e = e || event;
@@ -536,31 +708,66 @@
   
   // 事件冒泡
   5、bubbles
-  	- 属性返回一个布尔值，表示当前事件是否会冒泡。该属性为只读属性
+  	- 只读属性
+  	- 返回一个布尔值，表示当前事件是否会冒泡
   	- focus、blur和scroll事件不会冒泡，除了这三个事件bubbles属性返回false外，其他事件该属性都为true
   
-  6、cancelBubble
-  	- 该属性全浏览器支持，但并不是标准写法
-  	- cancelBubble属性只能用于阻止冒泡，无法阻止捕获阶段。该值可读写，默认值是false。
-  	- 当设置为true时，cancelBubble可以取消事件冒泡
-  	- 当使用stopIPropagation()方法或stopImmediatePropagation()方法时，关于cancelBubble值的变化，各浏览器表现不同
-  
-  7、stopPropagation()
+  6、stopPropagation()
   	- IE8-浏览器不支持 
   	- 表示取消事件的进一步捕获或冒泡，无返回值
   
-  8、stopImmediatePropagation()
+  7、stopImmediatePropagation()
   	- IE8-浏览器不支持 
   	- 可以取消事件的进一步捕获或冒泡，而且可以阻止同一个事件的其他监听函数被调用，无返回值
   	- 使用stopIPropagation()方法，可以阻止冒泡，但无法阻止同一事件的其他监听函数被调用
   
+  8、cancelBubble
+  	- 该属性全浏览器支持，但并不是标准写法
+  	- cancelBubble属性只能用于阻止冒泡，无法阻止捕获阶段。该值可读写，默认值是false
+  	- 当设置为true时，cancelBubble可以取消事件冒泡
+  	- 当使用stopIPropagation()方法或stopImmediatePropagation()方法时，关于cancelBubble值的变化，各浏览器表现不同
+  
+  	var handler = function(e){
+              e = e || event;
+              if(e.stopPropagation){
+                  e.stopPropagation();
+              }else{
+                  e.cancelBubble = true;
+              }
+  	}
+      
+      
+  // 事件流
+  9、eventPhase
+  	- IE8-浏览器不支持
+  	- eventPhase属性返回一个整数值，表示事件目前所处的事件流阶段
+  	- 0表示事件没有发生，1表示捕获阶段，2表示目标阶段，3表示冒泡阶段
+      
+      
+  // 取消默认行为
+  1、在DOM0级事件处理程序中取消默认行为，使用returnValue、preventDefault()和return false都有效
+  2、在DOM2级事件处理程序中取消默认行为，使用return false无效
+  3、在IE事件处理程序中取消默认行为，使用preventDefault()无效
+  
+  - cancelable
+  	cancelable属性返回一个布尔值，表示事件是否可以取消。
+      该属性为只读属性。返回true时，表示可以取消。否则，表示不可取消。IE8-浏览器不支持。
+  
+  - preventDefault()
+  	preventDefault()方法取消浏览器对当前事件的默认行为，无返回值。IE8-浏览器不支持。
+  
+  - returnValue
+  	returnValue属性可读写，默认值是true，但将其设置为false就可以取消事件的默认行为，与preventDefault()方法的作用相同
+      e.returnValue = false;firefox和IE9+浏览器不支持。
+  
+  - return false
+  	
+  - defaultPrevented
+  	defaultPrevented属性表示默认行为是否被阻止，返回true时表示被阻止，返回false时，表示未被阻止
+      IE8-浏览器不支持
   ```
 
 
-
-- 
-
-- 
 
 - 当事件的响应函数被触发时，浏览器每次都会将一个事件对象作为实参传递进响应函数,在事件对象中封装了当前事件相关的一切信息，比如：鼠标的坐标  键盘哪个按键被按下  鼠标滚轮滚动的方向。
 
@@ -570,27 +777,19 @@
   
   // clientX	可以获取鼠标指针的水平坐标
   // cilentY	可以获取鼠标指针的垂直坐标
-  
-  Div.onmousemove = function(event){
-  
-      //解决事件对象的兼容性问题
-      event = event || window.event;
-  
-      /*
-  	 * clientX可以获取鼠标指针的水平坐标
-  	 * cilentY可以获取鼠标指针的垂直坐标
-  	 */
+  box.onmousemove = function(event){
       var x = event.clientX;
       var y = event.clientY;
-  
   };
   		
   ```
 
   
 
+  
+
   - **addEventListener**()
-    - [深入理解DOM事件机制系列第二篇——事件处理程序 - 小火柴的蓝色理想 - 博客园 (cnblogs.com)](https://www.cnblogs.com/xiaohuochai/p/5859674.html)
+    - https://www.cnblogs.com/xiaohuochai/p/5859674.html
 
   ```js
   // addEventListener()	removeEventListener()	- DOM2级事件处理
@@ -609,7 +808,7 @@
   
   	   box.addEventListener('click',function(){
               consol.log('1');
-          });
+          },false);
   
   // 绑定事件 兼容写法
   function addEvent(target,type,handler){
@@ -617,7 +816,7 @@
           target.addEventListener(type,handler,false);
       }else{
           target.attachEvent('on'+type,function(event){
-              return handler.call(target,event);
+              return handler.call(target,event);	// this 问题
           });
       }
   }
