@@ -2,7 +2,72 @@
 
 
 
-## 盒子模型
+## 盒模型
+
+
+
+## box-sizing
+
+
+
+## box-shadow
+
+```css
+# box-shadow: (h-shadow v-shadow blur spread color inset)+;		/* 盒子阴影(IE8-不支持) */
+	- h-shadow: 水平阴影位置(必须)
+    - v-shadow: 垂直阴影位置(必须)
+    - blur:     模糊距离(可选)
+    - spread:   阴影尺寸(可选)
+    - color:    阴影颜色，默认和文本颜色一致(可选)
+    - inset:    内部阴影(可选)    
+
+/* 注意 */
+    1、可以使用多重阴影，但使用过多会造成性能差
+    2、边框在内阴影之上，内阴影在背景图片之上，背景图片在背景色之上，背景色在外阴影之上
+    3、内阴影对<img>元素没有任何效果
+    4、最先写的阴影在最顶层
+    5、该属性与border-radius一脉相承，若通过border-radius设置为圆角，则box-shadow的最终呈现也将是圆角
+
+```
+
+- **单侧阴影**
+
+  ```css
+  box-shadow: 0 5px 4px -4px black;
+  ```
+
+  ![image-20210518151700761](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151700761.png)
+
+- **邻边投影**
+
+  ```css
+  box-shadow: 3px 3px 6px -3px black;
+  ```
+
+  ![image-20210518151805646](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151805646.png)
+
+- **双侧投影**
+
+  ```css
+  box-shadow: 5px 0 5px -5px black,-5px 0 5px -5px black;
+  ```
+
+  ![image-20210518151848399](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151848399.png)
+
+
+
+## border-image
+
+```css
+/* 在边框位置设置图片(IE10-不支持) */
+
+```
+
+
+
+
+
+
 
 
 
@@ -19,8 +84,7 @@
 * 			inline：可以将一个元素作为内联元素显示
 * 			block: 可以将一个元素设置块元素显示
 * 			inline-block：将一个元素转换为行内块元素
-* 					- 可以使一个元素既有行内元素的特点又有块元素的特点
-* 						既可以设置宽高，又不会独占一行
+* 					- 可以使一个元素既有行内元素的特点又有块元素的特点,既可以设置宽高，又不会独占一行
 * 			none: 不显示元素，并且元素不会在页面中继续占有位置
 */
 
