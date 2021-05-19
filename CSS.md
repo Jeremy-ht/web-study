@@ -401,6 +401,14 @@ filter:alpha(opacity=50);
 
 
 
+### background-color
+
+```css
+/*设置一个背景颜色*/
+```
+
+
+
 ### background-image
 
 ```css
@@ -476,15 +484,15 @@ filter:alpha(opacity=50);
 
 
 
-
-
-
-
-
-
-
-
-
+```css
+### 简写属性 ###
+/*
+* background
+* 	- 通过该属性可以同时设置所有背景相关的样式
+* 	- 没有顺序的要求，谁在前睡在后都行
+* 		也没有数量的要求，不写的样式就使用默认值
+*/
+```
 
 
 
