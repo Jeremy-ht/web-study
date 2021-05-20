@@ -500,13 +500,91 @@ filter:alpha(opacity=50);
 
 
 
+# 选择器
 
 
 
+### 基本选择器
+
+```css
+/*通配符选择器*/		
+	* { margin: 0; padding: 0; border: none; }
+/*元素选择器*/		
+	body { background: #eee; }
+/*类选择器*/		
+	.list { list-style: square; }
+/*ID选择器*/		
+	#list { width: 500px; margin: 0 auto; }
+/*后代选择器*/		
+	.list li { margin-top: 10px; background: #abcdef; }
+
+/*子元素选择器*/ 
+	#wrap > .inner {color: pink;}
+# 也可称为直接后代选择器,此类选择器只能匹配到直接后代，不能匹配到深层次的后代元素
+	
+/*相邻兄弟选择器*/	
+	#wrap #first + .inner {color: #f00;}
+# 它只会匹配紧跟着的兄弟元素
+
+/*通用兄弟选择器*/	
+	#wrap #first ~ div { border: 1px solid;}
+# 它会匹配所有的兄弟元素(不需要紧跟)
+
+/*选择器分组*/		
+	h1,h2,h3{color: pink;}  
+# 此处的逗号我们称之为结合符
+```
 
 
 
+### 属性选择器
 
+```css
+/*存在和值属性选择器*/	
+- [attr]：该选择器选择包含 attr 属性的所有元素，不论 attr 的值为何。
+- [attr=val]：该选择器仅选择 attr 属性被赋值为 val 的所有元素。
+- [attr~=val]：表示带有以 attr 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少一个值为val。
+
+/*子串值属性选择器*/
+- [attr|=val] : 选择attr属性的值是val（包括val）或以val-开头的元素。
+- [attr^=val] : 选择attr属性的值以val开头（包括val）的元素。
+- [attr$=val] : 选择attr属性的值以val结尾（包括val）的元素。
+- [attr*=val] : 选择attr属性的值中包含字符串val的元素。
+```
+
+
+
+### 伪类与伪元素选择器
+
+```css
+/*
+ 链接伪类
+	注意:link，:visited，:target是作用于链接元素的！
+*/		
+    :link		表示作为超链接，并指向一个未访问的地址的所有锚
+    :visited	表示作为超链接，并指向一个已访问的地址的所有锚
+    :target 	代表一个特殊的元素，它的id是URI的片段标识符
+/*
+ 动态伪类
+	注意:hover，:active基本可以作用于所有的元素！
+*/		
+	:hover		表示悬浮到元素上
+	:active		表示匹配被用户激活的元素（点击按住时）
+
+# 由于a标签的:link和:visited可以覆盖了所有a标签的状态，所以当:link，:visited，:hover，:active同时出现在a标签
+身上时 :link和:visited不能放在最后！！！		lvha(lv好)
+
+:visited选择器,只有下列的属性才能被应用到已访问链接，其他无效
+    color
+    background-color
+    border-color
+
+### ### 注 ### ###
+/*
+* :link :visited只能作用于a链接元素，:hover，:active基本可以作用于所有的元素！
+* 并且:visited只能设置 color  background-color  border-color三个属性。其他属性无效
+*/
+```
 
 
 
