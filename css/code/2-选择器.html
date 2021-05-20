@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    .contain div:not(:last-child){
+        width: 200px;
+        height: 200px;
+        float: left;
+        border-right: 1px hotpink solid;
+    }
+
+    .contain div:empty{
+        background-color: #6495ED;
+    }
+
+    .box::before{
+        content: "* ";
+        color: pink;
+
+    }
+</style>
+<body>
+
+<div class="contain">
+
+    <div></div>
+    <div>2</div>
+    <div></div>
+    <div>4</div>
+    <div>5</div>
+
+    <div class="box">lilili</div>
+    <div > <span style="color: pink">* </span> lilili</div>
+</div>
+</body>
+</html>

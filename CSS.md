@@ -540,12 +540,12 @@ filter:alpha(opacity=50);
 ### 属性选择器
 
 ```css
-/*存在和值属性选择器*/	
+/* 存在和值属性选择器 */	
 - [attr]：该选择器选择包含 attr 属性的所有元素，不论 attr 的值为何。
 - [attr=val]：该选择器仅选择 attr 属性被赋值为 val 的所有元素。
 - [attr~=val]：表示带有以 attr 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少一个值为val。
 
-/*子串值属性选择器*/
+/* 子串值属性选择器 */
 - [attr|=val] : 选择attr属性的值是val（包括val）或以val-开头的元素。
 - [attr^=val] : 选择attr属性的值以val开头（包括val）的元素。
 - [attr$=val] : 选择attr属性的值以val结尾（包括val）的元素。
@@ -586,7 +586,59 @@ filter:alpha(opacity=50);
 */
 ```
 
+```css
+/* 表单相关伪类 */
+    :enabled	匹配可编辑的表单
+    :disable	匹配被禁用的表单
+    :checked	匹配被选中的表单
+    :focus		匹配获焦的表单
+```
 
+```css
+/* 结构性伪类 */
+    - index的值从1开始计数！
+    - index可以为变量n(只能是n)
+    - index可以为even odd
+
+#wrap ele:nth-child(index)		
+	- 表示匹配#wrap中第index的子元素，这个子元素必须是ele
+#wrap ele:nth-of-type(index)	
+	- 表示匹配#wrap中第index的ele子元素
+
+	# :nth-child和:nth-of-type有一个很重要的区别！:nth-of-type以元素为中心！！！
+
+	:nth-child(index)系列			
+        :first-child
+        :last-child
+        :nth-last-child(index)
+        :only-child	(相对于:first-child:last-child 或者 :nth-child(1):nth-last-child(1))
+
+	:nth-of-type(index)系列
+        :first-of-type
+        :last-of-type
+        :nth-last-type(index)
+        :only-of-type	(相对于:first-of-type:last-of-type 或者 :nth-of-type(1):nth-last-of-type(1))
+
+:not		
+:empty(内容必须是空的，有空格都不行，有attr没关系)
+```
+
+```css
+/* 伪元素 */
+    ::after
+    ::before
+    ::firstLetter
+    ::firstLine
+    ::selection
+```
+
+
+
+### css声明的优先级
+
+```css
+
+```
 
 
 
