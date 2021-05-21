@@ -504,6 +504,10 @@ filter:alpha(opacity=50);
 
 
 
+- https://juejin.cn/post/6908879198933221383
+
+  
+
 ### 基本选择器
 
 ```css
@@ -558,31 +562,31 @@ filter:alpha(opacity=50);
 
 ```css
 /*
- 链接伪类
-	注意:link，:visited，:target是作用于链接元素的！
+* 链接伪类
+*	注意:link，:visited，:target是作用于链接元素的！
 */		
     :link		表示作为超链接，并指向一个未访问的地址的所有锚
     :visited	表示作为超链接，并指向一个已访问的地址的所有锚
     :target 	代表一个特殊的元素，它的id是URI的片段标识符
 /*
- 动态伪类
-	注意:hover，:active基本可以作用于所有的元素！
+*动态伪类
+*	注意:hover，:active基本可以作用于所有的元素！
 */		
 	:hover		表示悬浮到元素上
 	:active		表示匹配被用户激活的元素（点击按住时）
 
 # 由于a标签的:link和:visited可以覆盖了所有a标签的状态，所以当:link，:visited，:hover，:active同时出现在a标签
-身上时 :link和:visited不能放在最后！！！		lvha(lv好)
+身上时 :link和:visited不能放在最后！！！		lvha
 
 :visited选择器,只有下列的属性才能被应用到已访问链接，其他无效
     color
     background-color
     border-color
 
-### ### 注 ### ###
+### ### 注意 ### ###
 /*
 * :link :visited只能作用于a链接元素，:hover，:active基本可以作用于所有的元素！
-* 并且:visited只能设置 color  background-color  border-color三个属性。其他属性无效
+* 并且:visited只能设置 color  background-color  border-color三个属性，其他属性无效
 */
 ```
 
@@ -644,7 +648,7 @@ filter:alpha(opacity=50);
 
 
 
-
+# 文本
 
 
 
