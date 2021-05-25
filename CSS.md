@@ -12,6 +12,8 @@
 
 ## box-shadow
 
+- [box-shadow - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow)
+
 ```css
 # box-shadow: (h-shadow v-shadow blur spread color inset)+;		/* 盒子阴影(IE8-不支持) */
 	- h-shadow: 水平阴影位置(必须)
@@ -453,7 +455,7 @@ filter:alpha(opacity=50);
 * 			bottom right 右下
 * 			如果只给出一个值，则第二个值默认是center
 * 
-* 		* 可以直接指定两个偏移量，
+* 		* 可以直接指定两个偏移量
 * 			第一个值是水平偏移量
 * 				- 如果指定的是一个正值，则图片会向右移动指定的像素
 * 				- 如果指定的是一个负值，则图片会向左移动指定的像素
@@ -489,10 +491,112 @@ filter:alpha(opacity=50);
 /*
 * background
 * 	- 通过该属性可以同时设置所有背景相关的样式
-* 	- 没有顺序的要求，谁在前睡在后都行
+* 	- 没有顺序的要求，谁在前在后都行
 * 		也没有数量的要求，不写的样式就使用默认值
 */
 ```
+
+
+
+
+
+## resize
+
+- [resize - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/resize)
+
+```css
+/* 控制一个元素的可调整大小性 */
+    - none 	元素不能被用户缩放。
+    - both 	允许用户在水平和垂直方向上调整元素的大小。
+    - horizontal 	允许用户在水平方向上调整元素的大小。
+    - vertical 	允许用户在垂直方向上调整元素的大小。
+
+# Note: 需要结合 overflow:auto; 一起使用。
+	    如果一个block元素的 overflow 属性被设置成了visible，那么resize属性对该元素无效。
+```
+
+
+
+
+
+## box-sizing
+
+- [box-sizing - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing)
+
+```css
+/* 如何计算一个元素的总宽度和总高度 */
+	- content-box：默认值。如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px 宽，
+	  			  并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。
+
+	- border-box：border和padding包含在元素的宽高之内。
+		         ( content = content - border - padding )
+
+# node: border-box不包含margin
+```
+
+
+
+
+
+## border-radius
+
+- [border-radius - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius)
+
+```css
+/* 设置元素的外边框圆角 */
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -649,6 +753,286 @@ filter:alpha(opacity=50);
 
 
 # 文本
+
+
+
+## text-shadow
+
+- [text-shadow - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow)
+
+```css
+/* 文字添加阴影 */
+	- 每个阴影值由元素在X和Y方向的偏移量、模糊半径和颜色值组成。颜色可放第一位和最后一位。
+text-shadow: 1px 1px 2px black;		/* 必选 必选 可选 可选 */
+/* offset-x | offset-y | blur-radius | color */
+```
+
+```css
+h1{ 
+    text-shadow: 2px 2px 9px black;
+    font: 100px/200px "微软雅黑"; 
+    color: white;
+    text-align: center; 
+}
+```
+
+![image-20210524091700471](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524091700471.png)
+
+
+
+## text-decoration
+
+- [text-decoration - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)
+
+```css
+/* 设置文本的修饰线外观的（下划线、上划线、贯穿线/删除线或闪烁） */
+	- 是下列四个属性的缩写。
+        - text-decoration-line
+            文本修饰的位置, 如下划线underline，删除线line-through
+        - text-decoration-color
+            文本修饰的颜色
+        - text-decoration-style
+            文本修饰的样式, 如波浪线wavy实线solid虚线dashed
+        - text-decoration-thickness
+            文本修饰线的粗细
+```
+
+
+
+## direction
+
+- [direction - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/direction)
+
+```css
+/* 设置文本、表列水平溢出的方向 */
+	- ltr	默认属性。可设置文本和其他元素的默认方向是从左到右。
+	- rtl 	可设置文本和其他元素的默认方向是从右到左。
+	- direction: ltr; || direction: rtl;
+
+# 通常配合 unicode-bidi 一起使用
+	direction:rtl;
+	unicode-bidi:bidi-override;
+```
+
+
+
+## 省略号
+
+```css
+/* 单行省略号 */
+p {
+	white-space:nowrap; 	/* 不换行 */
+	overflow:hidden; 		/* 超出隐藏 */
+	text-overflow:ellipsis;  /* 省略号 */
+}
+```
+
+
+
+## text-overflow
+
+- [text-overflow - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
+
+```css
+/* 如何显示的溢出内容 */
+```
+
+![image-20210524100225782](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524100225782.png)
+
+
+
+
+
+
+
+# Chrome
+
+## -webkit-box-reflect
+
+```css
+/* 倒影 */
+```
+
+
+
+## -webkit-text-stroke
+
+- [-webkit-text-stroke - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/-webkit-text-stroke)
+
+```css
+/* 为文本字符指定了宽和颜色（文字描边）*/
+	- <length> 文本宽.
+	- <color> 文本颜色.
+	- -webkit-text-stroke: 4px navy;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```js
+•••transform:
+		旋转rotate、扭曲skew、缩放scale和移动translate以及矩阵变形matrix。
+		https://blog.csdn.net/qq_24189933/article/details/79293870
+		
+•••超出DIV溢出隐藏		
+		https://blog.csdn.net/xiaodouya87/article/details/50084651
+
+		
+•••calc() 函数:
+		width: calc(100% - 20px);
+		- css3 的 calc()函数。这里的意思是设置宽度比100%的宽度少20px。
+		- calc()函数用于动态计算长度值。
+		- calc()函数支持 "+", "-", "*", "/" 运算；
+		- calc()函数使用标准的数学运算优先级规则；
+		
+•••水平垂直居中：
+	1. display: flex;
+	   margin: auto;
+
+	2. display: grid;
+	   place-items: center;
+	   
+
+•••文本居中：text-align:center
+•••块元素居中：margin：0 auto
+
+•••列表的 marker 属性：小圆点的颜色
+	li::marker {
+		color: #ccc;
+	}
+	
+	或者使用伪类
+	
+	li::before {
+		content: "•";
+		color: #ccc;
+		margin-right: 0.5em;
+	}
+
+	
+•••css3 文字过长用...代替
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		
+•••CSS中:和:: 一个冒号是伪类，两个冒号是伪元素	https://blog.csdn.net/sinat_36146776/article/details/53138178
+		伪类
+			:link 			
+			伪类将应用于未被访问过的链接，与:visited互斥。
+			
+			:hover 			
+			伪类将应用于有鼠标指针悬停于其上的元素。
+			
+			:active 		
+			伪类将应用于被激活的元素，如被点击的链接、被按下的按钮等。
+			
+			:visited		
+			伪类将应用于已经被访问过的链接，与:link互斥。
+			
+			:focus 			
+			伪类将应用于拥有键盘输入焦点的元素。
+			
+			:first-child 	
+			伪类将应用于元素在页面中第一次出现的时候。
+			
+			:lang 			
+			伪类将应用于元素带有指定lang的情况。
+			
+			
+		伪元素
+			::first-letter
+			伪元素的样式将应用于元素文本的第一个字（母）。
+
+			::first-line
+			伪元素的样式将应用于元素文本的第一行。
+			
+			::before
+			在元素内容的最前面添加新内容。
+
+			::after
+			在元素内容的最后面添加新内容。
+
+
+•••border-radius  创建圆角
+			border-radius：n1, n2, n3, n4 
+			border-radius: 25%;
+			
+•••box-shadow 添加阴影
+			box-shadow: x轴偏移 y轴偏移 模糊距离 阴影颜色 阴影开始方向（默认是从里往外，设置inset就是从外往里）
+			box-shadow: 10px 10px 5px #888888 inset; 
+
+
+•••background-image	添加背景图片
+			background-image: url, 定位, 平铺
+
+
+•••background-size	指定背景图像的大小。CSS3以前，背景图像大小由图像的实际大小决定
+			background-size: 宽 高
+
+•••background: linear-gradient(direction, color-stop1, color-stop2, ...); 渐变
+			**从上到下：**从顶部开始的线性渐变。起点是红色，慢慢过渡到蓝色、
+			background: linear-gradient(red, blue); /* 标准的语法 */ 
+
+			
+			**从左到右：**从左边开始的线性渐变。起点是红色，慢慢过渡到蓝色
+			background: linear-gradient(to right, red , blue); /* 标准的语法 */ 
+			
+CSS3文本效果
+•••text-shadow 文本阴影
+			text-shadow: 水平阴影，垂直阴影，模糊的距离，阴影的颜色、
+			text-shadow: 5px 5px 5px #FF0000;
+
+•••text-overflow 指定应向用户如何显示溢出内容
+			text-overflow: clip|ellipsis|string;
+			clip： 修剪文本
+			ellipsis：显示省略符号来代表被修剪的文本
+			string：使用给定的字符串来代表被修剪的文本
+
+•••word-wrap 自动换行属性允许您强制文本换行 - 即使这意味着分裂它中间的一个字
+			word-wrap: normal|break-word;
+			normal：只在允许的断字点换行（浏览器保持默认处理）
+			break-word：在长单词或 URL 地址内部进行换行
+
+•••outline-offset 简单来说就是在边框 border 外面又加了一层
+			outline-offset: length|inherit		轮廓与边框边缘的距离。| 规定应从父元素继承 outline-offset 属性的值。
+
+			
+CSS3 媒体查询
+•••@media 媒体查询 很多就是用来进行响应式开发了		https://blog.csdn.net/gtlishujie/article/details/81975157
+			@media 媒体类型 and (条件) 
+			{
+			
+			}
+
+•••a 标签属性	
+	href属性：规定链接指向的页面的 URL。    
+	target属性：_blank 新窗口打开链接
+	text-decoration:none 删除下划线
+
+边距：
+•••margin:上 右 下 左 (顺时针);(4)		margin:上 左右 下;(3)		margin:上下 左右;(2)	margin:上下左右;(1)
+
+```
+
+
+
+
+
+
 
 
 
