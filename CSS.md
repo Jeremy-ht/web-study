@@ -486,6 +486,51 @@ filter:alpha(opacity=50);
 
 
 
+### background-origin
+
+- [background-origin - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin)
+
+```css
+/* 规定了指定背景图片 background-image 属性的原点位置的背景相对区域 */
+    - border-box	 	背景图片的摆放以border区域为参考
+    - padding-box  		背景图片的摆放以padding区域为参考
+    - content-box  		背景图片的摆放以content区域为参考
+
+# node: 默认情况下背景图片是从padding box开始绘制，从border box开始剪裁
+# node: 当使用 background-attachment 为fixed时，该属性将被忽略不起作用。
+```
+
+
+
+### background-clip
+
+- [background-clip - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip)
+
+```css
+/* 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。 */
+    - border-box    背景延伸至边框外沿（但是在边框下层）。
+    - padding-box   背景延伸至内边距（padding）外沿。不会绘制到边框处。
+    - content-box   背景被裁剪至内容区（content box）外沿。
+    - text    背景被裁剪成文字的前景色。
+
+```
+
+
+
+### background-size
+
+- [[background-size - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip)
+
+```css
+/* 设置背景图片大小。 */
+	- auto
+	- cover
+	- contain
+	- <length>		指定背景图片大小，不能为负值。
+```
+
+
+
 ```css
 ### 简写属性 ###
 /*
@@ -548,7 +593,9 @@ filter:alpha(opacity=50);
 
 
 
+## border-image
 
+- [border-image - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-image)
 
 
 
@@ -719,7 +766,11 @@ filter:alpha(opacity=50);
         :first-child
         :last-child
         :nth-last-child(index)
-        :only-child	(相对于:first-child:last-child 或者 :nth-child(1):nth-last-child(1))
+        :only-child	(相对于:first-child:last-child 或者 :nth-child(1):nth-last-child(1))	
+		/* 前3个元素 */
+		li:nth-child(-n+3){
+        	color: deeppink;
+    	}
 
 	:nth-of-type(index)系列
         :first-of-type
@@ -838,6 +889,90 @@ p {
 ```
 
 ![image-20210524100225782](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524100225782.png)
+
+
+
+
+
+
+
+
+
+# 渐变
+
+
+
+## 线性 ( linear-gradient )
+
+- [linear-gradient - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient())
+
+
+
+## 径向 ( radial-gradient )
+
+- 
+
+```css
+radial-gradient() 函数创建一个<image>，用来展示由原点（渐变中心）辐射开的颜色渐变
+
+-默认均匀分布
+    radial-gradient(red,blue);
+ 
+-不均匀分布
+    radial-gradient(red 50%,blue 70%);
+ 
+-改变渐变的形状
+   radial-gradient(circle ,red,blue)
+   circle
+   ellipse（默认为椭圆）
+ 
+-渐变形状的大小
+   radial-gradient(closest-corner  circle ,red,blue)
+   closest-side   最近边
+   farthest-side  最远边
+   closest-corner 最近角
+   farthest-corner 最远角  （默认值）
+ 
+-改变圆心
+   radial-gradient(closest-corner  circle at 10px 10px,red,blue);  
+ 
+```
+
+
+
+
+
+
+
+
+
+
+
+## 圆锥
+
+
+
+
+
+# 过渡
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
