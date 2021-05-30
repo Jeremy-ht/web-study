@@ -1213,6 +1213,96 @@ transform:scale(2);
 
 
 
+## transform ( 3d变换 )
+
+
+
+```css
+/* 3D缩放 */
+	- transform: scaleZ(number)
+	- transform: scale3d(scaleX,scaleY,scaleZ);
+
+# Nodes: 如果只设置scaleZ(number)，你会发现元素并没有被扩大或压缩，scaleZ(number)需要和translateZ(length)配合使用，
+		number乘以length得到的值，是元素沿Z轴移动的距离，从而使得感觉被扩大或压缩 
+
+
+/* 3D旋转 */
+    - rotateX(angle)、
+    - rotateY(angle)、
+    - rotateZ(angle)、等价于rotate(angle) 
+    ￼- rotate3d(x,y,z,angle)
+			x, y, z分别接受一个数值(number),用来计算矢量方向(direction vector)，矢量方向是三维空间中的一条线, 
+			从坐标系原点到x, y, z值确定的那个点，元素围绕这条线旋转angle指定的值
+
+
+/* 3D平移 */
+	- transform: translateZ(length)是3D Transformaton特有的，其他两个2D中就有
+	- transform: translate3d(translateX,translateY,translateZ);
+
+# Nodes: translateZ 它不能是百分比 值; 那样的移动是没有意义的。
+
+```
+
+
+
+
+
+### 景深（ perspective ）
+
+```css
+/*
+* 景深:让3D场景有近大远小的效果（我们肉眼距离屏幕的距离）
+* 			是一个不可继承属性，但他可以作用于后代元素（不是作用于本身的）
+* 
+* 原理：
+* 		景深越大 灭点越远 元素变形更小	
+* 		景深越小 灭点越近 元素变形更大
+* 
+* 景深基点
+* 		视角的位置
+* */
+```
+
+
+
+
+
+### 灭点
+
+```css
+/* 立体图形各条边的延伸线所产生的相交点。透视点的消失点 */
+```
+
+
+
+
+
+### transform-style
+
+```css
+/*
+* 这个属性指定了子元素如何在空间中展示，只有两个属性值：flat（默认）和preserve-3d
+*           - flat 表示所有子元素在2D平面呈现，
+*           - preserve-3d 表示所有子元素在3D平面呈现，
+* 如果被扁平化，则子元素不会独立的存在于三维空间。
+* 因为该属性不会被（自动）继承，所以必须为元素所有非叶后代节点设置该属性。
+* */
+```
+
+
+
+
+
+
+
+### backface-visibility
+
+
+
+
+
+
+
 
 
 # filter

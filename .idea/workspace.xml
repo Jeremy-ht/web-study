@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="add06">
+    <list default="true" id="981c6109-d4b7-4432-a3dc-8db4c6a312e9" name="Default Changelist" comment="add15">
+      <change afterPath="$PROJECT_DIR$/css/code/13-3D变换-transform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS.assets/image-20210527083251096.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS.md" beforeDir="false" afterPath="$PROJECT_DIR$/CSS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/1..html" beforeDir="false" afterPath="$PROJECT_DIR$/css/锚链接.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html.md" beforeDir="false" afterPath="$PROJECT_DIR$/html.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/dom/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/code/09-过渡.html" beforeDir="false" afterPath="$PROJECT_DIR$/css/code/9-过渡.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/dom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css/code" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jeremy\Desktop\web-study\css\code" />
       <recent name="C:\Users\admin\Desktop\web-study\js\dom" />
       <recent name="C:\Users\admin\Desktop\web-study\image" />
       <recent name="C:\Users\admin\Desktop\web-study" />
@@ -92,6 +91,8 @@
       <workItem from="1620741025781" duration="3754000" />
       <workItem from="1621063845577" duration="2794000" />
       <workItem from="1621126785311" duration="1196000" />
+      <workItem from="1621951170855" duration="3742000" />
+      <workItem from="1622367371627" duration="3071000" />
     </task>
     <task id="LOCAL-00001" summary="add one day.txt">
       <created>1618299691583</created>
@@ -156,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620745714275</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add15">
+      <created>1621523311625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1621523311625</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +175,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -186,7 +200,8 @@
     <MESSAGE value="add04" />
     <MESSAGE value="add05" />
     <MESSAGE value="add06" />
-    <option name="LAST_COMMIT_MESSAGE" value="add06" />
+    <MESSAGE value="add15" />
+    <option name="LAST_COMMIT_MESSAGE" value="add15" />
   </component>
   <component name="masterDetails">
     <states>
