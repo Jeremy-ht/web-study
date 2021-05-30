@@ -12,12 +12,12 @@
 
 ```css
 # box-shadow: (h-shadow v-shadow blur spread color inset)+;		/* 盒子阴影(IE8-不支持) */
-	- h-shadow: 水平阴影位置(必须)
+    - inset:    内部阴影(可选)  	
+    - h-shadow: 水平阴影位置(必须)
     - v-shadow: 垂直阴影位置(必须)
     - blur:     模糊距离(可选)
     - spread:   阴影尺寸(可选)
-    - color:    阴影颜色，默认和文本颜色一致(可选)
-    - inset:    内部阴影(可选)    
+    - color:    阴影颜色，默认和文本颜色一致(可选)  
 
 /* 注意 */
     1、可以使用多重阴影，但使用过多会造成性能差
@@ -536,6 +536,40 @@ filter:alpha(opacity=50);
 * 		也没有数量的要求，不写的样式就使用默认值
 */
 ```
+
+
+
+## 表单相关
+
+
+
+### caret-color
+
+```css
+/* 定义插入光标（caret）的颜色 */
+    caret-color: red;
+    caret-color: auto;
+    caret-color: #5729e9;
+
+```
+
+
+
+
+
+
+
+
+
+## 滚动条
+
+
+
+
+
+
+
+
 
 
 
@@ -1060,7 +1094,141 @@ radial-gradient() 函数创建一个<image>，用来展示由原点（渐变中�
 
 
 
-# 变换（）
+# 变换
+
+## transform ( 2d变换 )
+
+### 旋转（ rotate  ）
+
+```css
+transform:rotate(angle);   
+    - 正值:顺时针旋转  rotate(360deg)
+    - 负值:逆时针旋转  rotate(-360deg)
+    - 只能设单值。正数表示顺时针旋转，负数表示逆时针旋转
+
+```
+
+
+
+
+
+### 平移（ translate ）
+
+```css
+- X方向平移:transform:  translateX(tx)
+- Y方向平移:transform:  translateY(ty) 
+- 二维平移：transform:  translate(tx [ty])； 如果ty没有指定，它的值默认为0。
+ 
+- 可设单值，也可设双值。
+       正数表示XY轴正向位移，负数为反向位移。设单值表示只X轴位移，Y轴坐标不变，
+       例如transform: translate(100px);等价于transform: translate(100px,0);
+
+```
+
+
+
+
+
+### 倾斜（ skew ）
+
+```css
+transform:skewX(45deg);
+    - X方向倾斜:transform:  skewX(angle)
+               skewX(45deg):参数值以deg为单位 代表与y轴之间的角度
+
+    - Y方向倾斜:transform:  skewY(angle)
+               skewY(45deg):参数值以deg为单位 代表与x轴之间的角度
+
+     - 二维倾斜:transform:  skew(ax[, ay]);  如果ay未提供，在Y轴上没有倾斜
+               skew(45deg,15deg):参数值以deg为单位 第一个参数代表与y轴之间的角度
+                                 第二个参数代表与x轴之间的角度
+                单值时表示只X轴扭曲，Y轴不变，如transform: skew(30deg);等价于transform: skew(30deg, 0);
+                考虑到可读性，不推荐用单值，应该用transform: skewX(30deg);。skewY表示只Y轴扭曲，X轴不变  
+            
+ 正值:拉正斜杠方向的两个角
+ 负值:拉反斜杠方向的两个角
+ 
+
+
+```
+
+
+
+
+
+### 缩放（ scale ）
+
+```css
+transform:scale(2);
+	- X方向缩放:transform:  scaleX(sx); 
+	- Y方向缩放:transform:  scaleY(sy);
+	- 二维缩放 :transform:  scale(sx[, sy]);  (如果sy 未指定，默认认为和sx的值相同)  
+ 
+  要缩小请设0.01～0.99之间的值，要放大请设超过1的值。
+  例如缩小一倍可以transform: scale(.5);
+      放大一倍可以transform: scale(2);
+ 
+ 如果只想X轴缩放，可以用scaleX(.5)相当于scale(.5, 1)。
+ 同理只想Y轴缩放，可以用scaleY(.5)相当于scale(1, .5)
+ 
+ 正值:缩放的程度
+  负值:不推荐使用（有旋转效果）
+  单值时表示只X轴,Y轴上缩放粒度一样，如transform: scale(2);等价于transform: scale(2,2);
+ 
+```
+
+
+
+
+
+### transform-origin
+
+- [transform-origin - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)
+
+```css
+/* 更改一个元素变形的基点 */
+	- 属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。 
+	  没有明确定义的偏移将重置为其对应的初始值。
+ 	- 如果定义了两个或更多值并且没有值的关键字，或者唯一使用的关键字是center，
+	  则第一个值表示水平偏移量，第二个值表示垂直偏移量。
+        一个值：
+        	必须是<length>，<percentage>，或 left, center, right, top, bottom关键字中的一个。
+        两个值：
+        	其中一个必须是<length>，<percentage>，或left, center, right关键字中的一个。
+        	另一个必须是<length>，<percentage>，或top, center, bottom关键字中的一个。
+        三个值：
+        	前两个值和只有两个值时的用法相同。
+        	第三个值必须是<length>。它始终代表Z轴偏移量。
+```
+
+
+
+
+
+### 矩阵 （ matrix ）
+
+
+
+
+
+
+
+
+
+# filter
+
+```css
+/* 将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像，背景和边框的渲染 */
+	- grayscale()
+		改变输入图像灰度。值为 100% 则完全转为灰度图像，值为 0% 图像无变化。
+		值在 0% 到 100% 之间，则是效果的线性乘数。若未设置值，默认是 0。filter: grayscale(100%)	
+
+
+```
+
+
+
+
 
 
 
