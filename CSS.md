@@ -1293,9 +1293,14 @@ transform:scale(2);
 
 
 
-
-
 ### backface-visibility
+
+```css
+/* 设置是否显示元素的背面，默认是显示的  */
+	- backface-visibility: keyword;
+		- hidden
+		- visible 默认值
+```
 
 
 
