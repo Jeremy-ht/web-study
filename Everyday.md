@@ -1,3 +1,15 @@
+## Week	One
+
+<div style="width: 100%;height: 50px;line-height: 50px;border-left: 5px solid hotpink;padding-left:14px;backgroup:block;font-size:18px"> 6.02 </div>
+
+​	- delay	延迟、延期、耽搁
+
+
+
+
+
+
+
 5.06
 	https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/thinkings/basic-data-structure
 
@@ -40,7 +52,6 @@ https://zhuanlan.zhihu.com/p/102279765
 
 4.14
 	HTTPS	https://mp.weixin.qq.com/s/jLqI7pVQgpWUIIWmsmr30A
-
 
 
 

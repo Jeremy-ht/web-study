@@ -6,15 +6,43 @@
 
     <style>
 
-        .warp{
+        .wrap {
             width: 400px;
             height: 400px;
             margin: 200px auto;
             border: 1px solid;
+            position: relative;
         }
 
-        .box{
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
 
+            width: 100px;
+            height: 100px;
+            background: deeppink;
+            text-align: center;
+            line-height: 100px;
+            font-weight: 600;
+            font-size: 20px;
+            /*transition: 3s;*/
+
+            animation-name: go;
+            animation-duration: 3s;
+        }
+
+        @keyframes go {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(720deg);
+
+            }
         }
 
     </style>
@@ -23,8 +51,10 @@
 <body>
 
 <div class="wrap">
-    <div class="box"></div>
+    <div class="box">go</div>
 </div>
+
+
 
 </body>
 </html>
