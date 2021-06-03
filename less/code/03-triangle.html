@@ -8,8 +8,7 @@
       @pink: pink;
 
       .triangle(@l:border-left-color,@c:pink) {
-
-        @l: @c;
+          border-@{l}-color: @c;
 
       }
 
@@ -20,9 +19,11 @@
         margin: 200px auto;
 
         .box {
+            width: 0;
+            height: 0;
           border: 30px solid transparent;
-          border-left-color:black;
-            //.triangle(border-left-color, black);
+          /*border-left-color:black;*/
+            .triangle(bottom, black);
         }
       }
 
