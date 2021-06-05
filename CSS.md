@@ -1337,8 +1337,6 @@ animation-name: move;
 
 
 
-
-
 ## animation-duration
 
 ```css
@@ -1352,9 +1350,130 @@ animation-name: move;
 
 
 
+## animation-timing-function
+
+```css
+/* 定义CSS动画在每一动画周期中执行的节奏 */
+	- 对于关键帧动画来说，timing function作用于一个关键帧周期而非整个动画周期，即从关键帧开始，到关键帧结束。
+ 
+动画的默认效果：由慢变快再变慢
+    linear:线性过渡，等同于贝塞尔曲线（0,0,1,1）
+    ease:平滑过渡，等同于贝塞尔曲线（0.25,0.1,0.25,1.0）
+    ease-in:由慢到快，等同于贝塞尔曲线（0.42,0,1,1）
+    ease-out:由快到慢，等同于贝塞尔曲线（0,0,0.58,1）
+    ease-in-out:由慢到快再到慢，等同于贝塞尔曲线（0.42,0,0.58,1）
+    cubic-bezier(1,1,2,3)
+    steps(n,[start|end]) 
+       传入一到两个参数，第一个参数意思是把动画分成 n 等分，然后动画就会平均地运行。
+       第二个参数 start 表示从动画的开头开始运行，相反，end 就表示从动画的结尾开始运行，
+       默认值为 end。
+ 
+```
 
 
 
+##  animation-delay
+
+```css
+/* 定义动画开始前等待的时间,以秒或毫秒计(属于动画外的范畴) */
+	- <time> 从动画样式应用到元素上到元素开始执行动画的时间差。
+			该值可用单位为秒(s)和毫秒(ms)。如果未设置单位，定义无效
+ 
+```
+
+
+
+## animation-iteration-count
+
+```css
+/* 定义了动画执行的次数（属于动画内的范畴） */
+   - infinite	无限循环播放动画.
+   - <number>	动画播放的次数 不可为负值. 
+
+```
+
+
+
+##  animation-direction
+
+```css
+/* 定义了动画执行的方向 */
+	- normal	每个循环内动画向前循环，换言之，每个动画循环结束，动画重置到起点重新开始,默认属性。
+
+	- alternate	动画交替反向运行，反向运行时，动画按步后退，同时，带时间功能的函数也反向，       
+			   比如，ease-in 在反向时成为ease-out。计数取决于开始时是奇数迭代还是偶数迭代
+
+	- reverse 反向运行动画，每周期结束动画由尾到头运行。
+
+	- alternate-reverse 反向交替， 反向开始交替
+
+```
+
+
+
+## animation-fill-mode
+
+```css
+/* 属于动画外的范畴，定义动画在动画外的状态 */
+    1.animation-fill-mode: none
+    2.animation-fill-mode: backwards
+    3.animation-fill-mode: forwards
+    4.animation-fill-mode: both
+
+/* 
+* backwards：
+*	from之前的状态与form的状态保持一致
+* forwards：
+*	to之后的状态与to的状态保持一致
+* both：
+*	backwards + forwards
+*/
+```
+
+
+
+## animation-play-state
+
+```css
+/* 定义了动画执行的运行和暂停 */
+	- running
+      	 	当前动画正在运行。
+	- paused
+      		 当前动画以被停止。
+
+```
+
+
+
+
+
+## 关键帧 ( @keyframes )
+
+```css
+# 语法：
+    @keyframes animiationName{
+        keyframes-selector{
+            css-style;
+        }
+    }
+ 
+# 参数：
+    - animiationName:必写项，定义动画的名称
+    - keyframes-selector：必写项，动画持续时间的百分比
+                 from：0%
+                 to：100%
+    - css-style：css声明
+ 
+```
+
+
+
+## animation
+
+```css
+# Notes:  在每个动画定义中，顺序很重要
+		 可以被解析为时间的第一个值被分配给animation-duration, 第二个分配给 animation-delay。
+```
 
 
 
@@ -1380,6 +1499,12 @@ animation-name: move;
 
 
 ```
+
+
+
+
+
+
 
 
 
