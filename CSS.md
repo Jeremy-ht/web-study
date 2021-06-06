@@ -1239,7 +1239,7 @@ transform:scale(2);
 	- transform: translateZ(length)是3D Transformaton特有的，其他两个2D中就有
 	- transform: translate3d(translateX,translateY,translateZ);
 
-# Nodes: translateZ 它不能是百分比 值; 那样的移动是没有意义的。
+# Nodes: translateZ 它不能是百分比值; 那样的移动是没有意义的。
 
 ```
 
