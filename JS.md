@@ -529,9 +529,11 @@
 
 
 
+# DOM尺寸&位置API
 
 
-# offsetParent
+
+## offsetParent
 
 - [HTMLElement.offsetParent - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetParent)
 
@@ -562,11 +564,52 @@
 
 
 
+## getBoundingClientRect
+
+- [Element.getBoundingClientRect() - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect)
+
+```js
+// getBoundingClientRect：一个元素四个角的相对位置
+
+    代表元素border-box的尺寸
+        height
+        width
+
+    元素左上角的相对位置
+        left
+        top
+
+    元素右下角的相对位置
+        right
+        bottom
+
+# Notes:
+	// getBoundingClientRect + 滚动条滚动时元素滚动的距离---> 绝对位置
+```
 
 
 
 
 
+## clientWidth & clientHeight
+
+- [Element.clientWidth - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/clientWidth)
+
+```js
+ // padding box(可视区域)
+```
+
+
+
+
+
+## offsetWidth & offsetHeight
+
+- [HTMLElement.offsetWidth - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetWidth)
+
+```js
+// padding box(可视区域)+border
+```
 
 
 
