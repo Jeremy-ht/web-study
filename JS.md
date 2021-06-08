@@ -387,7 +387,7 @@
 
   
 
-  ![img](C:\Users\admin\Desktop\web-study\JS.assets\740839-20160901091826449-1099471755.jpg)
+  ![img](assets/740839-20160901091826449-1099471755.jpg)
 
   
 
@@ -423,7 +423,7 @@
 
   
 
-  ![img](C:\Users\admin\Desktop\web-study\JS.assets\740839-20160901152045574-1466453.jpg)
+  ![img](assets/740839-20160901152045574-1466453.jpg)
 
   
 

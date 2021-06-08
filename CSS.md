@@ -34,7 +34,7 @@
   box-shadow: 0 5px 4px -4px black;
   ```
 
-  ![image-20210518151700761](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151700761.png)
+  ![image-20210518151700761](assets/image-20210518151700761.png)
 
 - **邻边投影**
 
@@ -42,7 +42,7 @@
   box-shadow: 3px 3px 6px -3px black;
   ```
 
-  ![image-20210518151805646](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151805646.png)
+  ![image-20210518151805646](assets/image-20210518151805646.png)
 
 - **双侧投影**
 
@@ -50,7 +50,7 @@
   box-shadow: 5px 0 5px -5px black,-5px 0 5px -5px black;
   ```
 
-  ![image-20210518151848399](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151848399.png)
+  ![image-20210518151848399](assets/image-20210518151848399.png)
 
 
 
@@ -857,7 +857,7 @@ h1{
 }
 ```
 
-![image-20210524091700471](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524091700471.png)
+![image-20210524091700471](assets/image-20210524091700471.png)
 
 
 
@@ -918,7 +918,7 @@ p {
 /* 如何显示的溢出内容 */
 ```
 
-![image-20210524100225782](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524100225782.png)
+![image-20210524100225782](assets/image-20210524100225782.png)
 
 
 
