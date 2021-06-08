@@ -948,9 +948,70 @@
 # onmousewheel	鼠标滚轮滚动
 	- 火狐不支持
 			bind(box1,"DOMMouseScroll",box1.onmousewheel);	// 火狐
-	- 使用addEventListener()方法绑定响应函数，取消默认行为时不能使用return false，需要使用event来取消默认行为				  event.preventDefault();但是IE8不支持event.preventDefault();
+	- 使用addEventListener()方法绑定响应函数，取消默认行为时不能使用return false，需要使用event来取消默认行为				  			  event.preventDefault();但是IE8不支持event.preventDefault();
 	- event.preventDefault && event.preventDefault();
 ```
+
+```js
+# Notes: 
+	滚轮事件火狐和其他浏览器绑定方式不同
+    
+    // 非火狐浏览器
+    element.onmousewheel = function(ev){
+        ev=ev||event;
+        /* 向上:正 向下:负 */
+        console.log(ev.wheelDelta);
+    }
+
+    // 火狐
+    if(testNode.addEventListener){
+        testNode.addEventListener("DOMMouseScroll",function(ev){
+            ev=ev||event;
+            /* 向上:负 向下:正 */
+            console.log(ev.detail);
+        })
+    }
+
+
+// 鼠标滚轮事件
+	ie/chrome : onmousewheel(dom0)
+			   event.wheelDelta
+					上：120
+					下：-120
+				
+	firefox : DOMMouseScroll 必须用(dom2的标准模式)
+			 event.detail
+					上：-3
+					下：3
+
+// 阻止dom2的默认行为
+	e.preventDefault && e.preventDefault()	
+			
+// 阻止dom0的默认行为
+	return false;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1093,9 +1154,10 @@
 
 
 
+# 听不懂系列
 
-
-
+- canvas
+  - [尚硅谷HTML5实战教程(html5项目实战)_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1YW411T7p3?p=7)
 
 
 
