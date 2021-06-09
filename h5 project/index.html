@@ -6,126 +6,155 @@
 
     <style type="text/less">
 
-        /* reset start */
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
+      /* reset start */
+      html, body {
+        height: 100%;
+        overflow: hidden;
+      }
 
-        html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
-            margin: 0;
-            padding: 0;
-            font: 14px "微软雅黑";
-        }
+      html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+        margin: 0;
+        padding: 0;
+        font: 14px "微软雅黑";
+      }
 
-        a {
-            text-decoration: none;
-            display: block;
-        }
+      a {
+        text-decoration: none;
+        display: block;
+      }
 
-        li {
-            list-style: none;
-        }
+      li {
+        list-style: none;
+      }
 
-        img {
-            display: block;
-        }
+      img {
+        display: block;
+      }
 
-        .clearfix {
-            *zoom: 1;
-        }
+      .clearfix {
+        *zoom: 1;
+      }
 
-        .clearfix:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+      .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
 
-        /* reset end */
+      /* reset end */
 
-        /* header start */
-        #header {
-            background: white;
-        }
+      /* header start */
+      #header {
+        background: white;
+      }
 
-        .main {
-            width: 1100px;
-            height: 80px;
-            margin: 0 auto;
-            position: relative;
-        }
+      .main {
+        width: 1100px;
+        height: 80px;
+        margin: 0 auto;
+        position: relative;
+      }
 
-        #log {
-            float: left;
-            margin-top: 30px;
-        }
+      #log {
+        float: left;
+        margin-top: 30px;
+      }
 
-        #nav {
-            float: right;
-            margin-top: 50px;
-        }
+      #nav {
+        float: right;
+        margin-top: 50px;
+      }
 
-        #nav ul > li {
-            float: left;
-            margin-left: 40px;
-            position: relative;
-        }
+      #nav ul > li {
+        float: left;
+        margin-left: 40px;
+        position: relative;
+      }
 
-        #nav .up {
-            position: absolute;
-            width: 0;
-            overflow: hidden;
-            transition: 1s width;
-            color: black;
-        }
+      #nav .up {
+        position: absolute;
+        width: 0;
+        overflow: hidden;
+        transition: 1s width;
+        color: black;
+      }
 
-        #nav li:hover .up {
-            width: 100% !important;
-        }
+      #nav li:hover .up {
+        width: 100% !important;
+      }
 
-        .draw {
-            position: absolute;
-            bottom: -11px;
-            left: 0;
-            transition: .8s left ease-out;
-        }
+      .draw {
+        position: absolute;
+        bottom: -11px;
+        left: 0;
+        transition: .8s left ease-out;
+        z-index: 2;
+      }
 
-        /* header end */
+      /* header end */
 
-        /* content start */
-        #content {
-            width: 100%;
-            height: 300px;
-            background: gray;
-            position: relative;
-            overflow: hidden;
-        }
+      /* content start */
+      #content {
+        width: 100%;
+        height: 300px;
+        background: gray;
+        position: relative;
+        overflow: hidden;
 
-        #content .list {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            transition: 1s top;
-        }
+      }
 
-        #content .list li {
-            position: relative;
-        }
+      #content .list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: 1s top;
 
-        #content .list li > div {
-            background: pink;
-            width: 1100px;
-            height: 520px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-        }
+      }
 
-        /* content end */
+      #content .list li {
+        position: relative;
+        background-position: 50% 50% !important;
+      }
+
+      #content .list li > div {
+        background: pink;
+        width: 1100px;
+        height: 520px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      #content .list > .home {
+        background: url("img/bg1.jpg") no-repeat;
+
+      }
+
+      #content .list > .course {
+        background: url("img/bg2.jpg") no-repeat;
+
+      }
+
+      #content .list > .works {
+        background: url("img/bg3.jpg") no-repeat;
+
+      }
+
+      #content .list > .about {
+        background: url("img/bg4.jpg") no-repeat;
+
+      }
+
+      #content .list > .team {
+        background: url("img/bg5.jpg") no-repeat;
+
+      }
+
+      /* content end */
 
     </style>
 
@@ -226,6 +255,16 @@
         let headNode = document.querySelector('#header');
         let contentNode = document.querySelector('#content');
         let cList = document.querySelector('#content > .list');
+        let num = 0;
+
+        // 缩放页面
+        window.onresize = function () {
+            contentFun();
+            cList.style.top = -num * (document.documentElement.clientHeight - headNode.offsetHeight) + 'px';
+
+        }
+
+
         // 内容区
         contentFun();
 
@@ -254,6 +293,7 @@
 
                 listLis[i].onclick = function () {
                     move(this.index);
+                    num = this.index;
                 }
             }
 
