@@ -395,7 +395,15 @@
 
   ```js
   // 定位父级 offsetParent
-  	- 与当前元素最近的经过定位(position不等于static)的父级元素
+  	- 本身定位为fixed
+      	==> offsetParent:null（不是火狐）
+      	==> offsetParent:body（火狐）
+  
+      - 本身定位不为fixed
+              父级没有定位
+                  ==> offsetParent:body
+              父级有定位
+                  ==> offsetParent:定位父级
   
   1、元素自身有fixed定位，offsetParent的结果为null
   	- firefox浏览器有兼容性问题
@@ -414,7 +422,7 @@
   偏移量共包括offsetHeight、offsetWidth、offsetLeft、offsetTop这四个属性
   
   ```
-
+  
   
 
 
@@ -423,7 +431,7 @@
 
   
 
-  ![img](assets/740839-20160901152045574-1466453.jpg)
+  ![740839-20160901152045574-1466453](assets/740839-20160901152045574-1466454.jpg)
 
   
 
@@ -450,7 +458,7 @@
   
   
   # 页面大小
-  // 表示页面大小(不包含滚动条宽度)
+  // 表示页面大小(不包含滚动条宽度) 可视区域
   	- document.documentElement.clientWidth
   	- document.documentElement.clientHeight
   
@@ -458,9 +466,9 @@
   	- window.innerWidth
   	- window.innerHeight
   ```
+
   
-  
-  
+
   
 
 - **滚动scroll**
@@ -523,8 +531,9 @@
   
   
   # 滚动方法
+  
   ```
-
+  
   
 
 
@@ -558,6 +567,7 @@
 		offsetLeft 和 offsetTop 是参照于offsetParent的内边距边界的
 
 	3.dom里所有的元素都是有offsetLeft 和 offsetTop的
+    
 ```
 
 
@@ -569,12 +579,13 @@
 - [Element.getBoundingClientRect() - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect)
 
 ```js
+// Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口的位置
 // getBoundingClientRect：一个元素四个角的相对位置
 
     代表元素border-box的尺寸
-        height
         width
-
+        height
+        
     元素左上角的相对位置
         left
         top
@@ -584,7 +595,8 @@
         bottom
 
 # Notes:
-	// getBoundingClientRect + 滚动条滚动时元素滚动的距离---> 绝对位置
+	// getBoundingClientRect + 滚动条滚动时元素滚动的距离 = 绝对位置
+
 ```
 
 
@@ -608,7 +620,7 @@
 - [HTMLElement.offsetWidth - Web API 接口参考 | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetWidth)
 
 ```js
-// padding box(可视区域)+border
+// padding box(可视区域) + border
 ```
 
 
