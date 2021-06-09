@@ -13,8 +13,8 @@
         }
 
         html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             font: 14px "微软雅黑";
         }
 
@@ -87,7 +87,7 @@
             position: absolute;
             bottom: -11px;
             left: 0;
-            transition: 1s left ease-out;
+            transition: .8s left ease-out;
         }
 
         /* header end */
@@ -97,6 +97,32 @@
             width: 100%;
             height: 300px;
             background: gray;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #content .list {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            transition: 1s top;
+        }
+
+        #content .list li {
+            position: relative;
+        }
+
+        #content .list li > div {
+            background: pink;
+            width: 1100px;
+            height: 520px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
         }
 
         /* content end */
@@ -165,7 +191,25 @@
         </div>
     </header>
 
-    <section id="content"></section>
+    <section id="content">
+        <ul class="list">
+            <li class="home">
+                <div>home</div>
+            </li>
+            <li class="course">
+                <div>Course</div>
+            </li>
+            <li class="works">
+                <div>Works</div>
+            </li>
+            <li class="about">
+                <div>About</div>
+            </li>
+            <li class="team">
+                <div>Team</div>
+            </li>
+        </ul>
+    </section>
 
 </section>
 
@@ -177,25 +221,56 @@
         let listLis = document.querySelectorAll('#nav > .list > li');
         let upNode = document.querySelectorAll('#nav > .list > li .up');
 
-        draw.style.left = listLis[0].offsetLeft + listLis[0].offsetWidth / 2 - draw.offsetWidth / 2 + 'px';
 
-        upNode[0].style.width = '100%';
+        let contentNodes = document.querySelectorAll('#content .list li');
+        let headNode = document.querySelector('#header');
+        let contentNode = document.querySelector('#content');
+        let cList = document.querySelector('#content > .list');
+        // 内容区
+        contentFun();
 
-        for (let i = 0; i < listLis.length; i++) {
+        function contentFun() {
 
-            listLis[i].index = i;
+            let conHeight = document.documentElement.clientHeight - headNode.offsetHeight + 'px';
 
-            listLis[i].onclick = function () {
+            contentNode.style.height = conHeight;
+            for (let i = 0; i < contentNodes.length; i++) {
+                contentNodes[i].style.height = conHeight;
+            }
+
+        }
+
+
+        // 头部
+        headFun();
+
+        function headFun() {
+
+            draw.style.left = listLis[0].offsetLeft + listLis[0].offsetWidth / 2 - draw.offsetWidth / 2 + 'px';
+            upNode[0].style.width = '100%';
+            for (let i = 0; i < listLis.length; i++) {
+
+                listLis[i].index = i;
+
+                listLis[i].onclick = function () {
+                    move(this.index);
+                }
+            }
+
+            function move(index) {
 
                 for (let j = 0; j < upNode.length; j++) {
                     upNode[j].style.width = '0';
                 }
 
-                upNode[this.index].style.width = '100%';
+                upNode[index].style.width = '100%';
 
-                draw.style.left = listLis[this.index].offsetLeft + listLis[this.index].offsetWidth / 2 - draw.offsetWidth / 2 + 'px';
+                draw.style.left = listLis[index].offsetLeft + listLis[index].offsetWidth / 2 - draw.offsetWidth / 2 + 'px';
+
+                cList.style.top = -index * (document.documentElement.clientHeight - headNode.offsetHeight) + 'px';
 
             }
+
         }
 
     }
