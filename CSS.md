@@ -34,7 +34,7 @@
   box-shadow: 0 5px 4px -4px black;
   ```
 
-  ![image-20210518151700761](assets/image-20210518151700761.png)
+  ![image-20210518151700761](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151700761.png)
 
 - **邻边投影**
 
@@ -42,7 +42,7 @@
   box-shadow: 3px 3px 6px -3px black;
   ```
 
-  ![image-20210518151805646](assets/image-20210518151805646.png)
+  ![image-20210518151805646](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151805646.png)
 
 - **双侧投影**
 
@@ -50,7 +50,7 @@
   box-shadow: 5px 0 5px -5px black,-5px 0 5px -5px black;
   ```
 
-  ![image-20210518151848399](assets/image-20210518151848399.png)
+  ![image-20210518151848399](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151848399.png)
 
 
 
@@ -857,7 +857,7 @@ h1{
 }
 ```
 
-![image-20210524091700471](assets/image-20210524091700471.png)
+![image-20210524091700471](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524091700471.png)
 
 
 
@@ -918,7 +918,7 @@ p {
 /* 如何显示的溢出内容 */
 ```
 
-![image-20210524100225782](assets/image-20210524100225782.png)
+![image-20210524100225782](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524100225782.png)
 
 
 
@@ -1078,8 +1078,8 @@ radial-gradient() 函数创建一个<image>，用来展示由原点（渐变中�
 
 ```css
 /* 简写属性 */
-	- transition-property，transition-duration，transition-timing-function，transition-delay
-	         过渡属性           过渡持续时间            过渡时间曲线         等待多长时间开始过渡
+	- transition-property  transition-duration  transition-timing-function  transition-delay
+	         过渡属性           过渡持续时间            过渡时间曲线           等待多长时间开始过渡
 
 # Nodes: 可以被指定为一个或多个 CSS 属性的过渡效果，多个属性之间用逗号进行分隔
 ```

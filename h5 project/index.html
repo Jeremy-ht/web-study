@@ -6,255 +6,260 @@
 
     <style type="text/less">
 
-        /* reset start */
-        html, body {
-            height: 100%;
-            overflow: hidden;
+      /* reset start */
+      html, body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+        margin: 0;
+        padding: 0;
+        font: 14px "微软雅黑";
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      img {
+        display: block;
+      }
+
+      .clearfix {
+        *zoom: 1;
+      }
+
+      .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .commonTitle {
+        color: #009ee0;
+        font-size: 80px;
+        line-height: 0.8;
+        font-weight: bold;
+        letter-spacing: -5px;
+      }
+
+      /* reset end */
+
+      /* header start */
+      #header {
+        background: white;
+      }
+
+      .main {
+        width: 1100px;
+        height: 80px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      #log {
+        float: left;
+        margin-top: 30px;
+      }
+
+      #nav {
+        float: right;
+        margin-top: 50px;
+      }
+
+      #nav ul > li {
+        float: left;
+        margin-left: 40px;
+        position: relative;
+      }
+
+      #nav .up {
+        position: absolute;
+        width: 0;
+        overflow: hidden;
+        transition: 1s width;
+        color: black;
+      }
+
+      #nav li:hover .up {
+        width: 100% !important;
+      }
+
+      .draw {
+        position: absolute;
+        bottom: -11px;
+        left: 0;
+        transition: .8s left ease-out;
+        z-index: 2;
+      }
+
+      /* header end */
+
+      /* content start */
+      #content {
+        width: 100%;
+        height: 300px;
+        background: gray;
+        position: relative;
+        overflow: hidden;
+
+      }
+
+      #content .list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: 1s top;
+
+      }
+
+      #content .list li {
+        position: relative;
+        background-position: 50% 50% !important;
+      }
+
+      #content .list li section {
+        //background: pink;
+        width: 1100px;
+        height: 520px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      #content .list > .home {
+        background: url("img/bg1.jpg") no-repeat;
+
+      }
+
+      #content .list > .course {
+        background: url("img/bg2.jpg") no-repeat;
+
+      }
+
+      #content .list > .works {
+        background: url("img/bg4.jpg") no-repeat;
+
+      }
+
+      #content .list > .about {
+        background: url("img/bg4.jpg") no-repeat;
+
+      }
+
+      #content .list > .team {
+        background: url("img/bg5.jpg") no-repeat;
+
+      }
+
+      /*第三屏*/
+      .text {
+        margin: 50px 0 100px 50px;
+      }
+
+      .items {
+        margin: 50px;
+      }
+
+      .items > .item {
+        width: 220px;
+        height: 133px;
+        background: #ff9900;
+        margin: 0 1px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .items > .item:last-child {
+        width: 332px;
+        height: 133px;
+        background: #ff9900;
+      }
+
+      .items > .item > div {
+        background-color: rgb(25, 25, 25);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        padding: 20px;
+        color: white;
+        opacity: 0;
+      }
+
+      .mask {
+        transition: .8s opacity;
+      }
+
+      .items > .item:hover .mask {
+        opacity: 0.8;
+      }
+
+      .items > .item img {
+        transition: 1s;
+      }
+      .items > .item:hover img {
+        transform: scale(1.5) rotate(30deg) ;
+      }
+
+      .mask > .icon {
+        width: 32px;
+        height: 34px;
+        background: url(img/zoomico.png) no-repeat;
+        margin: 20px auto 0;
+        transition: .8s background-position;
+      }
+
+      .mask > .icon:hover {
+        background-position: 0 -34px;
+
+      }
+
+      .hover-cursor {
+        cursor: pointer;
+      }
+
+
+      .works .robot {
+        background: url("img/robot.png");
+        position: absolute;
+        width: 167px;
+        height: 191px;
+        left: 900px;
+        top: 170px;
+        animation: robot-move 3s infinite linear;
+      }
+
+      @keyframes robot-move {
+        0% {
+          transform: translateX(0) rotateY(0);
         }
-
-        html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
-            margin: 0;
-            padding: 0;
-            font: 14px "微软雅黑";
+        49% {
+          transform: translateX(-390px) rotateY(0);
         }
-
-        a {
-            text-decoration: none;
-            display: block;
+        50% {
+          transform: translateX(-400px) rotateY(180deg);
         }
-
-        li {
-            list-style: none;
+        100% {
+          transform: translateX(0px) rotateY(180deg);
         }
-
-        img {
-            display: block;
-        }
-
-        .clearfix {
-            *zoom: 1;
-        }
-
-        .clearfix:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        .commonTitle {
-            color: #009ee0;
-            font-size: 80px;
-            line-height: 0.8;
-            font-weight: bold;
-            letter-spacing: -5px;
-        }
-
-        /* reset end */
-
-        /* header start */
-        #header {
-            background: white;
-        }
-
-        .main {
-            width: 1100px;
-            height: 80px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        #log {
-            float: left;
-            margin-top: 30px;
-        }
-
-        #nav {
-            float: right;
-            margin-top: 50px;
-        }
-
-        #nav ul > li {
-            float: left;
-            margin-left: 40px;
-            position: relative;
-        }
-
-        #nav .up {
-            position: absolute;
-            width: 0;
-            overflow: hidden;
-            transition: 1s width;
-            color: black;
-        }
-
-        #nav li:hover .up {
-            width: 100% !important;
-        }
-
-        .draw {
-            position: absolute;
-            bottom: -11px;
-            left: 0;
-            transition: .8s left ease-out;
-            z-index: 2;
-        }
-
-        /* header end */
-
-        /* content start */
-        #content {
-            width: 100%;
-            height: 300px;
-            background: gray;
-            position: relative;
-            overflow: hidden;
-
-        }
-
-        #content .list {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            transition: 1s top;
-
-        }
-
-        #content .list li {
-            position: relative;
-            background-position: 50% 50% !important;
-        }
-
-        #content .list li section {
-            background: pink;
-            width: 1100px;
-            height: 520px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        #content .list > .home {
-            background: url("img/bg1.jpg") no-repeat;
-
-        }
-
-        #content .list > .course {
-            background: url("img/bg2.jpg") no-repeat;
-
-        }
-
-        #content .list > .works {
-            background: url("img/bg3.jpg") no-repeat;
-
-        }
-
-        #content .list > .about {
-            background: url("img/bg4.jpg") no-repeat;
-
-        }
-
-        #content .list > .team {
-            background: url("img/bg5.jpg") no-repeat;
-
-        }
-
-        /*第三屏*/
-        .text {
-            margin: 50px 0 100px 50px;
-        }
-
-        .items {
-            margin: 50px;
-        }
-
-        .items > .item {
-            width: 220px;
-            height: 133px;
-            background: #ff9900;
-            margin: 0 1px;
-            float: left;
-            position: relative;
-        }
-
-        .items > .item:last-child {
-            width: 332px;
-            height: 133px;
-            background: #ff9900;
-        }
-
-        .items > .item > div {
-            background-color: rgb(25, 25, 25);
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            box-sizing: border-box;
-            padding: 20px;
-            color: white;
-            opacity: 0;
-        }
-
-        .mask {
-            transition: .8s opacity;
-        }
-
-        .items > .item:hover .mask {
-            opacity: 0.8;
-        }
-
-        .mask > .icon {
-            width: 32px;
-            height: 34px;
-            background: url(img/zoomico.png) no-repeat;
-            margin: 20px auto 0;
-            transition: .8s background-position;
-        }
-
-        .mask > .icon:hover {
-            background-position: 0 -34px;
-
-        }
-
-        .hover-cursor {
-            cursor: pointer;
-        }
+      }
 
 
-        .works .robot {
-            background: url("img/robot.png");
-            position: absolute;
-            width: 167px;
-            height: 191px;
-            left: 900px;
-            top: 170px;
-            animation: robot-move 3s infinite linear;
-        }
-
-        @keyframes robot-move {
-
-            0% {
-                transform: translateX(0) rotateY(0);
-
-            }
-            49% {
-                transform: translateX(-390px) rotateY(0) ;
-            }
-            50% {
-                transform: translateX(-400px) rotateY(180deg);
-            }
-            100%{
-                transform: translateX(0px) rotateY(180deg);
-            }
-
-        }
-
-
-        /* content end */
+      /* content end */
 
     </style>
 
