@@ -1470,6 +1470,8 @@ animation-name: move;
 
 ## animation
 
+- [深入理解CSS动画animation - 小火柴的蓝色理想 - 博客园 (cnblogs.com)](https://www.cnblogs.com/xiaohuochai/p/5391663.html)
+
 ```css
 # Notes:  在每个动画定义中，顺序很重要
 		 可以被解析为时间的第一个值被分配给animation-duration, 第二个分配给 animation-delay。
@@ -1477,9 +1479,7 @@ animation-name: move;
 
 
 
-
-
-
+- https://animista.net/
 
 
 
@@ -1680,16 +1680,6 @@ CSS3 媒体查询
 •••margin:上 右 下 左 (顺时针);(4)		margin:上 左右 下;(3)		margin:上下 左右;(2)	margin:上下左右;(1)
 
 ```
-
-
-
-
-
-
-
-# Less
-
-<div style="width: 100%;height: 50px;line-height: 50px;border-left: 5px solid hotpink;padding-left:14px;backgroup:block;font-size:18px"> https://less.bootcss.com/ </div>
 
 
 
