@@ -1148,8 +1148,6 @@ transform:skewX(45deg);
  正值:拉正斜杠方向的两个角
  负值:拉反斜杠方向的两个角
  
-
-
 ```
 
 
@@ -1172,8 +1170,8 @@ transform:scale(2);
  同理只想Y轴缩放，可以用scaleY(.5)相当于scale(1, .5)
  
  正值:缩放的程度
-  负值:不推荐使用（有旋转效果）
-  单值时表示只X轴,Y轴上缩放粒度一样，如transform: scale(2);等价于transform: scale(2,2);
+ 负值:不推荐使用（有旋转效果）
+ 单值时表示只X轴,Y轴上缩放粒度一样，如transform: scale(2);等价于transform: scale(2,2);
  
 ```
 
@@ -1222,7 +1220,8 @@ transform:scale(2);
 	- transform: scaleZ(number)
 	- transform: scale3d(scaleX,scaleY,scaleZ);
 
-# Nodes: 如果只设置scaleZ(number)，你会发现元素并没有被扩大或压缩，scaleZ(number)需要和translateZ(length)配合使用，
+# Nodes: 
+		如果只设置scaleZ(number)，你会发现元素并没有被扩大或压缩，scaleZ(number)需要和translateZ(length)配合使用，
 		number乘以length得到的值，是元素沿Z轴移动的距离，从而使得感觉被扩大或压缩 
 
 
@@ -1239,7 +1238,8 @@ transform:scale(2);
 	- transform: translateZ(length)是3D Transformaton特有的，其他两个2D中就有
 	- transform: translate3d(translateX,translateY,translateZ);
 
-# Nodes: translateZ 它不能是百分比值; 那样的移动是没有意义的。
+# Nodes: 
+		translateZ 它不能是百分比值; 那样的移动是没有意义的。
 
 ```
 
@@ -1281,7 +1281,7 @@ transform:scale(2);
 
 ```css
 /*
-* 这个属性指定了子元素如何在空间中展示，只有两个属性值：flat（默认）和preserve-3d
+* 这个属性指定了子元素如何在空间中展示，只有两个属性值：flat（默认）和 preserve-3d
 *           - flat 表示所有子元素在2D平面呈现，
 *           - preserve-3d 表示所有子元素在3D平面呈现，
 * 如果被扁平化，则子元素不会独立的存在于三维空间。
