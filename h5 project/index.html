@@ -329,12 +329,13 @@
             transform: rotateY(180deg);
         }
 
-        .course-img .backface, .course-img .face{
+        .course-img .backface, .course-img .face {
             position: absolute;
             width: 100%;
             height: 100%;
             transition: 1s transform;
         }
+
         .course-img .backface {
             background: url(img/apcoa.png) no-repeat;
             background-position: 50% 50%;
@@ -347,6 +348,33 @@
             color: white;
             backface-visibility: hidden;
             background-color: rgba(126, 205, 65, 1);
+        }
+
+        /* 第一屏 */
+        .home-list {
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .home-list > ul > li:nth-child(1) {
+            background-color: #ff9900;
+        }
+
+        .home-list > ul > li:nth-child(2) {
+            background-color: deeppink;
+        }
+
+        .home-list > ul > li:nth-child(3) {
+            background-color: gold;
+        }
+
+        .home-list > ul > li:nth-child(4) {
+            background-color: brown;
+        }
+
+        .home-list .commonTitle > div {
+            color: white;
         }
 
 
@@ -419,7 +447,27 @@
     <section id="content">
         <ul class="list">
             <li class="home">
-                <div>home</div>
+                <section>
+
+                    <div class="home-list">
+                        <ul class="">
+                            <li class="commonTitle">
+                                <div class="item">one layer</div>
+                            </li>
+                            <li class="commonTitle">
+                                <div class="item">one layer</div>
+                            </li>
+                            <li class="commonTitle">
+                                <div class="item">one layer</div>
+                            </li>
+                            <li class="commonTitle">
+                                <div class="item">one layer</div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </section>
             </li>
             <li class="course">
                 <section>
@@ -701,7 +749,7 @@
 
         }
 
-        move(1);
+        move(0);
 
         // 第三屏
 

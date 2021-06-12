@@ -116,13 +116,13 @@
             }
         }
 
-        .container .item:nth-child(4) {
-            perspective: 300px;
+        .container .item:nth-of-type(5) {
+            perspective: 100px;
+            transform-style: preserve-3d;
 
         }
 
         @keyframes scle-move-box4 {
-
             from {
                 transform: translateZ(600px);
             }
@@ -168,16 +168,15 @@
                 animation-timing-function: ease-out;
             }
             50% {
-                transform: translateY(-80px);
+                transform: translateY(-90px);
                 animation-timing-function: ease-in;
             }
             65% {
                 transform: translateY(0);
                 animation-timing-function: ease-out;
-
             }
             80% {
-                transform: translateY(-40px);
+                transform: translateY(-50px);
                 animation-timing-function: ease-in;
             }
             90% {
@@ -185,7 +184,7 @@
                 animation-timing-function: ease-out;
             }
             93% {
-                transform: translateY(-20px);
+                transform: translateY(-28px);
                 animation-timing-function: ease-in;
             }
             96% {
@@ -193,8 +192,8 @@
                 animation-timing-function: ease-in;
             }
             99% {
-                transform: translateY(-10px);
-                animation-timing-function: ease-in;
+                transform: translateY(-16px);
+                animation-timing-function: ease-out;
             }
             100% {
                 transform: translateY(0);
@@ -300,7 +299,7 @@
 
                 case 4:
                     let box4 = document.querySelector('.box-' + index);
-                    box4.style.animation = `scle-move-box${index} 0.8s both`;
+                    box4.style.animation = `scle-move-box${index} 0.4s both`;
                     break;
 
                 case 5:
