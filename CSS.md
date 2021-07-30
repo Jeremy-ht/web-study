@@ -34,7 +34,7 @@
   box-shadow: 0 5px 4px -4px black;
   ```
 
-  ![image-20210518151700761](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151700761.png)
+  ![image-20210518151700761](assets\image-20210518151700761.png)
 
 - **邻边投影**
 
@@ -42,7 +42,7 @@
   box-shadow: 3px 3px 6px -3px black;
   ```
 
-  ![image-20210518151805646](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151805646.png)
+  ![image-20210518151805646](assets\image-20210518151805646.png)
 
 - **双侧投影**
 
@@ -50,7 +50,7 @@
   box-shadow: 5px 0 5px -5px black,-5px 0 5px -5px black;
   ```
 
-  ![image-20210518151848399](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210518151848399.png)
+  ![image-20210518151848399](assets\image-20210518151848399.png)
 
 
 
@@ -70,6 +70,8 @@
 
 
 ## display
+
+- [display - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display)
 
 ```css
 /*
@@ -391,10 +393,6 @@ filter:alpha(opacity=50);
 
 
 
-
-
-
-
 ## 背景( backgroud )
 
 
@@ -492,8 +490,10 @@ filter:alpha(opacity=50);
     - padding-box  		背景图片的摆放以padding区域为参考
     - content-box  		背景图片的摆放以content区域为参考
 
-# node: 默认情况下背景图片是从padding box开始绘制，从border box开始剪裁
-# node: 当使用 background-attachment 为fixed时，该属性将被忽略不起作用。
+# Nodes: 
+	默认情况下背景图片是从padding box开始绘制，从border box开始剪裁
+# Nodes: 
+	当使用 background-attachment 为fixed时，该属性将被忽略不起作用。
 ```
 
 
@@ -552,8 +552,6 @@ filter:alpha(opacity=50);
     caret-color: #5729e9;
 
 ```
-
-
 
 
 
@@ -635,9 +633,35 @@ filter:alpha(opacity=50);
 
 
 
+## 元素隐藏方法总结
+
+```css
+1、如果希望元素不可见、不占据空间、资源会加载、DOM 可访问： display: none；
+2、如果希望元素不可见、不能点击、但占据空间、资源会加载，可以使用： visibility: hidden；
+3、如果希望元素不可见、不占据空间、显隐时可以又transition淡入淡出效果，
+   这里使用visibility: hidden而不是display: none，是因为display: none会影响css3的transition过渡效果。 
+   但是display: none并不会影响cssanimation动画的效果。
+4、如果希望元素不可见、可以点击、占据空间，可以使用： opacity: 0；
+5、如果希望元素不可见、可以点击、不占据空间，可以使用： opacity: 0; position: absolute;；
+6、如果希望元素不可见、不能点击、占据空间，可以使用： position: relative; z-index: -1;；
+7、如果希望元素不可见、不能点击、不占据空间，可以使用： position: absolute ; z-index: -1;；
+
+```
 
 
 
+### display: none`与`visibility: hidden的区别
+
+```css
+1、display: none的元素不占据任何空间，visibility: hidden的元素空间保留；
+2、display: none会影响css3的transition过渡效果，visibility: hidden不会；
+3、display: none隐藏产生重绘 ( repaint ) 和回流 ( relfow )，
+   visibility: hidden只会触发重绘；
+4、株连性：display: none的节点和子孙节点元素全都不可见，
+          visibility: hidden的节点的子孙节点元素可以设置 visibility: visible显示。
+          visibility: hidden属性值具有继承性，所以子孙元素默认继承了hidden而隐藏，
+          但是当子孙元素重置为visibility: visible就不会被隐藏
+```
 
 
 
@@ -857,7 +881,7 @@ h1{
 }
 ```
 
-![image-20210524091700471](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524091700471.png)
+![image-20210524091700471](assets\image-20210524091700471.png)
 
 
 
@@ -880,6 +904,18 @@ h1{
 
 
 
+
+
+## text-align
+
+```css
+/* 定义行内内容（例如文字）如何相对它的块父元素对齐。text-align 并不控制块元素自己的对齐，只控制它的行内内容的对齐。*/
+```
+
+
+
+
+
 ## direction
 
 - [direction - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/direction)
@@ -897,7 +933,102 @@ h1{
 
 
 
-## 省略号
+
+
+## writing-mode
+
+```css
+/* 排版竖文 */
+```
+
+
+
+
+
+## text-align-last
+
+```css
+/* 设置文本两端对齐 */
+text-align-last: justify;
+```
+
+![image-20210711150711209](assets\image-20210711150711209.png)
+
+![image-20210711150731055](assets\image-20210711150731055.png)
+
+
+
+
+
+
+
+
+
+
+
+## text-overflow
+
+- [text-overflow - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
+
+```css
+/* 如何显示的溢出内容 */
+```
+
+![image-20210524100225782](assets\image-20210524100225782.png)
+
+
+
+
+
+## ::first-letter
+
+- [::first-letter (:first-letter) - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::first-letter)
+
+```css
+/* 选中首个字符 */
+```
+
+![img](https://user-gold-cdn.xitu.io/2019/7/20/16c0f2269b48097d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+
+
+## word-spacing
+
+```css
+/* word-spacing指的是字符“空格”的间隙。如果一段文字中没有空格，则该属性无效。*/
+```
+
+![image-20210711115342084](assets\image-20210711115342084.png)
+
+
+
+## white-space
+
+```css
+/* 如果在html中输入多个空白符，默认会被当成一个空白符处理，实际上就是这个属性控制的 */
+    normal：合并空白符和换行符；
+    nowrap：合并空白符，但不许换行；
+    pre：不合并空白符，并且只在有换行符的地方换行；
+    pre-wrap：不合并空白符，允许换行符换行和文本自动换行；
+```
+
+
+
+
+
+## 字体分栏
+
+```css
+column-count	分栏数量
+column-gap		每一列中间的距离
+column-rule		分栏中间的
+```
+
+
+
+
+
+## 单行省略号
 
 ```css
 /* 单行省略号 */
@@ -910,15 +1041,19 @@ p {
 
 
 
-## text-overflow
-
-- [text-overflow - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow)
+## 多行省略号
 
 ```css
-/* 如何显示的溢出内容 */
+/* 多行省略号 */
+p{
+    display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
 ```
 
-![image-20210524100225782](C:\Users\admin\Desktop\web-study\CSS.assets\image-20210524100225782.png)
+
 
 
 

@@ -308,10 +308,18 @@ const scrollTop = () => window.scrollTo(0, 0)
 
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////// Array /////////////////////////////////////////////////////
 
-
-
-
+/**
+ * 	1、Array.fill()
+ * 		- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
+ * 		- 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引
+ * 		- 参数: arr.fill(value[, start[, end]])
+ * 			-- value 用来填充数组元素的值
+ * 		    -- start 可选 起始索引，默认值为0
+ * 		    -- end 可选 终止索引，默认值为 this.length
+ */
 
 
 

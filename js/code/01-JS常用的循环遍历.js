@@ -1,7 +1,7 @@
+
+// https://zoo.team/article/cycle-in-js
+
 /**
- *  Notes: 数组遍历     https://juejin.cn/post/6966390357005172773
- *
- *
  *  1、for
  *      - 索引
  *  2、for....of
@@ -33,6 +33,7 @@
  *  11、reduceRight
  *
  *
+ *  12、对象遍历
  */
 
 
@@ -219,11 +220,11 @@ console.log(min)   // { name: "left", width: 20 }
 
 
 /**
- *  Notes: 对象遍历     https://juejin.cn/post/6966390357005172773
- *
- *
- *
+ *  12、对象遍历     https://zoo.team/article/cycle-in-js
+ *      - 对象数组的去重，并统计每一项重复次数
+ *      - for in
+ *      - Object.keys
+ *      - Object.values
+ *      - Object.entries
+ *      - Object.getOwnPropertyNames
  */
-
-
-
